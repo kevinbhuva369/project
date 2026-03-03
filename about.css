@@ -44,3 +44,6 @@ section {
 .about-ul{
          justify-content: center;
 }
+p{
+     text-align: center;
+}
