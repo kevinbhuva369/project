@@ -47,3 +47,21 @@ a {
 #icon {
   width: 50px;
 }
+.main-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.hero-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+img {
+  width: 300px;
+}
