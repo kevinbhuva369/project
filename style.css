@@ -48,7 +48,7 @@ header {
 
 #icon {
   width: 40px;
-   border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Icon ko white kiya */
@@ -143,9 +143,10 @@ h1 {
 }
 
 /* --- Spiritual Hub Section --- */
-.png-information{
-     padding: 100px 10px;
+.png-information {
+  padding: 100px 10px;
 }
+
 .temple-information {
   padding: 100px 5%;
   background: white;
@@ -194,7 +195,7 @@ h1 {
 
 .temple-card:hover {
   transform: translateY(-10px);
-    box-shadow: 12px 17px 20px 2px black;
+  box-shadow: 12px 17px 20px 2px black;
 }
 
 .card-img {
@@ -219,11 +220,15 @@ h1 {
 }
 
 footer {
+  height: 500px;
   padding: 40px;
   background: var(--deep-maroon);
   color: white;
   text-align: center;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-container:nth-child {
