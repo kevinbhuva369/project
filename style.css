@@ -47,8 +47,8 @@ header {
 }
 
 #icon {
-  width: 45px;
-
+  width: 40px;
+   border-radius: 50%;
 }
 
 /* Icon ko white kiya */
@@ -143,9 +143,11 @@ h1 {
 }
 
 /* --- Spiritual Hub Section --- */
+.png-information{
+     padding: 100px 10px;
+}
 .temple-information {
   padding: 100px 5%;
-  text-align: center;
   background: white;
 }
 
@@ -153,10 +155,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 50px;
 }
 
-.ganesh-icon img {
+.png-icon img {
   width: 80px;
   opacity: 0.8;
 }
@@ -186,11 +189,12 @@ h1 {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .temple-card:hover {
   transform: translateY(-10px);
+    box-shadow: 12px 17px 20px 2px black;
 }
 
 .card-img {
@@ -220,4 +224,8 @@ footer {
   color: white;
   text-align: center;
   font-size: 0.9rem;
+}
+
+.info-container:nth-child {
+  transform: rotate(180deg);
 }
