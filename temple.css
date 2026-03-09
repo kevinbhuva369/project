@@ -1,0 +1,15 @@
+/* --- Global Reset & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #C89535;
+    /* Premium UI Gold */
+    --deep-maroon: #4A0E0E;
+    /* Spiritual Red */
+    --cream: #F8F5E6;
+    /* Clean BG */
+}
