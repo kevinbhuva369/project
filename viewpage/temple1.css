@@ -1,0 +1,244 @@
+/* === Premium Aesthetic Temple View Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--cream, #FDFBF5);
+}
+
+/* Hover shadow effects for elegant feel */
+::selection {
+    background: var(--gold, #D4AF37);
+    color: var(--deep-maroon, #5C1611);
+}
+
+/* Hero Parallax Section */
+.temple-hero-section {
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 0; 
+    padding-top: 80px; 
+    box-shadow: inset 0 -20px 40px rgba(0,0,0,0.5); /* Inner shadow for depth */
+}
+
+.hero-content {
+    color: var(--gold, #D4AF37);
+    z-index: 2;
+    animation: fadeInDown 1.5s ease;
+    text-shadow: 0px 5px 25px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.2);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Elegant Content Typography */
+.information-section, .aesthetic-gallery, .map-section {
+    padding: 80px 20px;
+    width: 100%;
+    background-color: var(--cream, #FDFBF5);
+    text-align: center;
+}
+
+.text-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--deep-maroon, #5C1611);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--gold, #D4AF37);
+    bottom: -10px;
+    left: 20%;
+}
+
+.section-divider {
+    width: 80%;
+    height: 2px;
+    margin: 40px auto;
+    background: linear-gradient(to right, transparent, var(--gold, #D4AF37), transparent);
+}
+
+.drop-cap-paragraph {
+    text-align: justify;
+    line-height: 2;
+    font-size: 1.15rem;
+    color: var(--text-dark, #2C3539);
+    column-count: 1;
+}
+
+@media(min-width: 768px){
+    .drop-cap-paragraph {
+        column-count: 2;
+        column-gap: 50px;
+    }
+}
+
+.drop-cap-paragraph p:first-of-type::first-letter {
+    color: var(--gold, #D4AF37);
+    float: left;
+    font-size: 5.5rem;
+    line-height: 4.5rem;
+    padding-top: 4px;
+    padding-right: 12px;
+    font-family: 'Cinzel Decorative', cursive;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.inline-history-img {
+    width: 100%;
+    max-width: 400px;
+    float: right;
+    margin: 10px 0 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border: 3px solid rgba(212, 175, 55, 0.4);
+    object-fit: cover;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.inline-history-img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .inline-history-img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+/* Aesthetic Mini Gallery & Advanced CSS Cropping */
+.aesthetic-gallery {
+    background-color: #fff; /* contrast against cream */
+}
+
+.mini-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.authentic-gallery-item {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 3px solid rgba(212, 175, 55, 0.4);
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.authentic-gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(92, 22, 17, 0.25);
+    border-color: var(--gold, #D4AF37);
+}
+
+/* Location Map Map */
+.map-container {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 2px solid var(--gold, #D4AF37);
+}
+
+.back-btn-container {
+    margin-top: 40px;
+}
+
+.back-to-gallery-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--deep-maroon, #5C1611);
+    color: var(--gold, #D4AF37);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold, #D4AF37);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.back-to-gallery-btn:hover {
+    background: var(--gold, #D4AF37);
+    color: var(--deep-maroon, #5C1611);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(92, 22, 17, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .information-section, .aesthetic-gallery, .map-section {
+        padding: 40px 15px;
+    }
+    .drop-cap-paragraph p:first-of-type::first-letter {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}

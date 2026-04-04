@@ -1,0 +1,131 @@
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1605429476774-766344515927?q=80&w=2070') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(92, 22, 17, 0.88) 0%, rgba(212, 175, 55, 0.5) 100%); /* Luxury Cultural Gradient */
+}
+
+.content-section {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 900px;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--gold);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content-section p {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  opacity: 0.9;
+}
+
+.main-btn {
+  background: var(--gold);
+  border: 2px solid var(--gold);
+  color: white;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+/* --- Spiritual Hub Section --- */
+.info-section {
+  padding: 100px 10px;
+}
+
+.temple-information {
+  padding: 100px 5%;
+  background: white;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.info-icon img {
+  width: 80px;
+  opacity: 0.8;
+  animation: divineFloat 4s ease-in-out infinite;
+}
+
+@keyframes divineFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.divine-title {
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--deep-maroon);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* --- Popular Darshans (Grid) --- */
+.popular-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* --- Responsive Home Page --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .content-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .info-section {
+    padding: 60px 5%;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .divine-title {
+    font-size: 1.8rem;
+  }
+  
+  .popular-section {
+    padding: 60px 5%;
+  }
+}

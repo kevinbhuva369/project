@@ -1,0 +1,431 @@
+/* --- Global Reset & Fonts --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Best, Cultural, Luxury, Aesthetic Palette */
+  --gold: #D4AF37;        /* Luxury Premium Gold */
+  --deep-maroon: #5C1611; /* Royal Temple Crimson / Maroon */
+  --cream: #FDFBF5;       /* Aesthetic Warm Antique Cream */
+  --saffron: #D35400;     /* Deep Cultural Saffron */
+  
+  /* Text and Backgrounds */
+  --bg-surface: #FFFFFF;  /* Luxury Pure White */
+  --text-dark: #2C3539;   /* Elegant Gunmetal for text */
+  --text-light: #5A6268;  /* Sophisticated Muted text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* Premium Global Page Load Animation */
+body > header {
+  animation: divineEntryHeader 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+body > main, body > footer, body > section, body > div:not(#divine-preloader) {
+  animation: divineEntryMain 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.05s;
+  opacity: 0;
+}
+
+/* Pause entry animations while loading */
+body.loading > header,
+body.loading > main, 
+body.loading > footer, 
+body.loading > section, 
+body.loading > div:not(#divine-preloader) {
+    animation: none !important;
+    opacity: 0 !important;
+}
+
+/* Premium Divine Preloader */
+#divine-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--cream);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+#divine-preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-mandala {
+    width: 120px;
+    height: 120px;
+    animation: divineSpin 10s linear infinite, divineGlow 3s ease-in-out infinite alternate;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.preloader-text {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--deep-maroon);
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    animation: divineGlowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes divineSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes divineGlow {
+    from { box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+    to { box-shadow: 0 0 60px rgba(212, 175, 55, 1), 0 0 100px rgba(92, 22, 17, 0.8); }
+}
+
+@keyframes divineGlowText {
+    from { 
+      text-shadow: 0 0 5px rgba(212, 175, 55, 0.2); 
+      transform: scale(1);
+    }
+    to { 
+      text-shadow: 0 0 25px rgba(212, 175, 55, 1); 
+      transform: scale(1.05);
+    }
+}
+
+@keyframes divineEntryHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes divineEntryMain {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* --- Fixed Navbar (Glass Effect) --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--gold);
+  padding: 10px 0;
+}
+
+/* --- Navigation Styles --- */
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav-main ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-main ul li {
+    margin: 0 20px;
+}
+
+.nav-main ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-main ul li a:hover,
+.nav-main ul li a.active {
+    color: var(--gold);
+}
+
+/* Nav Search Bar */
+.nav-search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin-left: 20px;
+}
+.nav-search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+.nav-search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Search Overlay */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(248, 245, 230, 0.95);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    padding: 100px 20px 20px 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+.search-overlay.active {
+    display: flex;
+}
+.close-overlay {
+    position: fixed;
+    top: 85px;
+    right: 40px;
+    font-size: 2.5rem;
+    color: var(--deep-maroon);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-highlight {
+    background-color: var(--gold);
+    color: var(--deep-maroon);
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.search-overlay h2 {
+    color: var(--deep-maroon);
+    font-family: 'Cinzel Decorative', cursive;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#icon {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-family: 'Cinzel Decorative', cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: black;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.temple-card {
+  background: var(--bg-surface);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  border: 1px solid rgba(212, 175, 55, 0.15); /* Slight gold border for luxury */
+}
+
+.temple-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(92, 22, 17, 0.15); /* Elegant maroon glow */
+}
+
+.card-img {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* --- Buttons in temple cards --- */
+.btn {
+  margin-top: 15px;
+}
+
+.btn button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  background: var(--gold);
+  color: var(--cream);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn button:hover {
+  background: var(--deep-maroon);
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(92, 22, 17, 0.2);
+}
+
+/* --- Premium Interactions Engine --- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 40px;
+  background: var(--deep-maroon);
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Responsive Global --- */
+@media (max-width: 768px) {
+  .nav-main {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .nav-main ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-main ul li {
+    margin: 0;
+  }
+  
+  .nav-main ul li a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+  
+  .nav-search-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .close-overlay {
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  
+  .temple-grid {
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+}
