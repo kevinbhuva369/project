@@ -235,12 +235,19 @@ const pathPrefix = isViewPage ? '../' : '';
   // Build the search UI inside the overlay
   overlayEl.innerHTML = `
     <div class="search-bar-wrap">
-      <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
-      <input type="text" id="globalSearch" placeholder="Search temples, deities, locations…" autocomplete="off" spellcheck="false">
+      <div class="search-input-wrap" style="position:relative;flex:1;">
+        <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+        <input type="text" id="globalSearch" placeholder="Search temples, deities, locations…" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 18px 12px 44px;">
+      </div>
       <button class="search-close-btn" id="searchCloseBtn" title="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="search-hint-row">
+      <span><i class="fa-solid fa-om" style="color:rgba(212,160,23,0.7);margin-right:6px;"></i>Divine Journey — Search Sacred Temples</span>
+      <span>Press <kbd style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:1px 6px;font-family:monospace;font-size:0.85em;">Esc</kbd> to close</span>
     </div>
     <div class="search-results-grid" id="searchResultsGrid"></div>
   `;
+
 
   const searchInput = document.getElementById('globalSearch');
   const resultsGrid = document.getElementById('searchResultsGrid');
@@ -269,8 +276,8 @@ const pathPrefix = isViewPage ? '../' : '';
       ? TEMPLES.filter(t =>
           t.name.toLowerCase().includes(q) ||
           t.tags.includes(q)
-        ).slice(0, 24)
-      : TEMPLES.slice(0, 24);
+        ).slice(0, 20)
+      : TEMPLES.slice(0, 20);
 
     if (!matches.length) {
       resultsGrid.innerHTML = `<p class="search-no-result"><i class="fa-solid fa-magnifying-glass" style="color:var(--gold);margin-right:8px;"></i>No temples found for "<strong style="color:#fff;">${query}</strong>"</p>`;
@@ -279,11 +286,16 @@ const pathPrefix = isViewPage ? '../' : '';
 
     resultsGrid.innerHTML = matches.map(t => `
       <a href="${pathPrefix}${t.path}" class="search-result-item" title="${t.name}">
-        <i class="fa-solid fa-gopuram"></i>
-        <span>${t.name}</span>
+        <div class="sri-img" style="background-image:url('${pathPrefix}${t.img || 'images/kedarnath_temple.png'}')"></div>
+        <div class="sri-info">
+          <span class="sri-name">${t.name}</span>
+          <span class="sri-tag"><i class="fa-solid fa-gopuram"></i> ${t.tags.split(' ').slice(0,2).join(' · ')}</span>
+        </div>
+        <i class="fa-solid fa-arrow-right sri-arrow"></i>
       </a>
     `).join('');
   }
+
 
   searchBtn.addEventListener('click', () => {
     if (isOpen) closeSearch(); else openSearch();
