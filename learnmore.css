@@ -904,3 +904,31 @@ main { margin-top: var(--nav-h); }
 .lm-cream .lm-pull-quote blockquote,
 .lm-white .lm-pull-quote blockquote { color: var(--deep-maroon); }
 
+/* ─── STEPS RESPONSIVE ───────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .lm-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .lm-steps { grid-template-columns: 1fr; }
+}
+
+/* ─── HIGHLIGHT BOX ENHANCED ─────────────────────────────────────────────── */
+.lm-highlight-box {
+  border-left: 4px solid var(--gold) !important;
+  background: rgba(212,160,23,0.07);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 24px 28px;
+}
+.lm-highlight-box h3 {
+  color: var(--deep-maroon);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.lm-highlight-box h3 i { color: var(--gold-vibrant); }
+.lm-highlight-box p {
+  color: rgba(26,10,0,0.68);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
