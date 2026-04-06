@@ -6,51 +6,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divine Journey | About Us — Our Mission & Story</title>
   <meta name="description" content="Learn about Divine Journey — our mission to bring India's sacred temple heritage to pilgrims everywhere. Contact us and connect with our team.">
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
   <link rel="shortcut icon" href="colorful-arabesque-mandala-pattern-background_492473-352.avif" type="image/x-icon">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 
 <body>
-  <!-- Navigation Bar -->
+  <!-- ═══ NAVIGATION ═══ -->
   <header>
     <nav class="nav-main">
-      <section class="nav-icon">
+      <a href="index.html" class="nav-icon">
         <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey Logo" id="icon">
         <span class="logo-text">DIVINE JOURNEY</span>
-      </section>
-      <ul>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links-desktop">
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html" class="active">ABOUT</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="temples.html">TEMPLES</a></li>
+        <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
+        <li><a href="learnmore.html">KNOWLEDGE</a></li>
         <li class="nav-search-container">
-          <input type="text" id="globalSearch" placeholder="Search temples...">
-          <button id="searchBtn">🔍</button>
+          <button id="searchBtn" class="premium-nav-search" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-text-nav">Search</span></button>
         </li>
       </ul>
     </nav>
   </header>
+
+  <!-- ═══ FULL-SCREEN OVERLAY (Mobile) ═══ -->
+  <div class="nav-overlay" id="navOverlay">
+    <div class="nav-overlay-content">
+      <a href="index.html" class="overlay-link">HOME</a>
+      <a href="about.html" class="overlay-link active">ABOUT</a>
+      <a href="temples.html" class="overlay-link">TEMPLES</a>
+      <a href="jyotirlinga.html" class="overlay-link">JYOTIRLINGAS</a>
+      <a href="learnmore.html" class="overlay-link">KNOWLEDGE</a>
+    </div>
+    <div class="nav-overlay-footer">
+      <p><i class="fa-solid fa-om gold-icon"></i> Divine Journey — India's Sacred Heritage</p>
+    </div>
+  </div>
+
+  <!-- ═══ BOTTOM NAVIGATION (Mobile Only) ═══ -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <i class="fa-solid fa-house gold-icon"></i>
+      <span>Home</span>
+    </a>
+    <a href="temples.html" class="bottom-nav-item">
+      <i class="fa-solid fa-vihara gold-icon"></i>
+      <span>Temples</span>
+    </a>
+    <a href="jyotirlinga.html" class="bottom-nav-item">
+      <i class="fa-solid fa-gopuram gold-icon"></i>
+      <span>Jyotir</span>
+    </a>
+    <a href="#" class="bottom-nav-item" id="mobileSearchTrigger">
+      <i class="fa-solid fa-magnifying-glass gold-icon"></i>
+      <span>Search</span>
+    </a>
+  </nav>
+
+  <!-- Search Results Overlay -->
+  <div id="search-results-overlay" class="search-results-overlay" style="display:none;"></div>
 
   <!-- About Hero Section -->
   <section class="about-hero">
     <div class="about-hero-overlay"></div>
     <div class="about-content-section">
       <h1>ABOUT US</h1>
-      <p>Discover the soul behind your divine journey, our story, and the mission that drives us.</p>
+      <p>Discover the soul behind your divine journey — our story, and the mission that drives us.</p>
     </div>
   </section>
 
   <!-- About Info & Mission -->
   <section class="about-section">
-    <div class="info-icon">
-      <img src="https://cdn-icons-png.flaticon.com/512/2413/2413550.png" alt="Ganesh Icon">
+    <div class="info-icon" style="text-align:center;margin-bottom:20px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2413/2413550.png" alt="Ganesh Icon" style="width:70px;height:70px;display:inline-block;filter:sepia(1) saturate(4) hue-rotate(2deg) brightness(0.88);">
     </div>
-    <h2 class="divine-title">OUR SPIRITUAL MISSION</h2>
+    <h2 class="divine-title" style="text-align:center;margin-bottom:24px;">OUR SPIRITUAL MISSION</h2>
     <p class="about-text">
       Welcome to Divine Journey — a sanctuary for exploring the profound heritage, architectural marvels, and spiritual essence of India's most revered temples. We believe that true peace is found in connecting with our ancient roots and understanding the sacred history that shaped our culture. Our mission is to guide you through a virtual pilgrimage, offering insights and reflections on the profound wisdom embedded in these monumental structures. Let the aura of these sacred places rejuvenate your soul.
     </p>
@@ -58,24 +98,24 @@
     <div class="about-divider"></div>
 
     <!-- Values Grid -->
-    <h2 class="divine-title" style="margin-bottom: 30px;">WHAT WE STAND FOR</h2>
+    <h2 class="divine-title" style="text-align:center;margin-bottom:30px;">WHAT WE STAND FOR</h2>
     <div class="values-grid">
-      <div class="value-card">
+      <div class="value-card scroll-reveal" data-delay="0.1s">
         <span class="value-icon">🏛️</span>
         <h3>Heritage</h3>
         <p>Preserving 5000+ years of sacred architectural history for future generations.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card scroll-reveal" data-delay="0.2s">
         <span class="value-icon">🙏</span>
         <h3>Devotion</h3>
         <p>Deeply respectful of each temple's unique spiritual significance and tradition.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card scroll-reveal" data-delay="0.3s">
         <span class="value-icon">📚</span>
         <h3>Knowledge</h3>
         <p>Curated, researched content to help you understand every sacred site.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card scroll-reveal" data-delay="0.4s">
         <span class="value-icon">🌏</span>
         <h3>Accessibility</h3>
         <p>Bringing the divine closer to all, regardless of where you are in the world.</p>
@@ -85,15 +125,15 @@
     <div class="about-divider"></div>
 
     <!-- Contact Section -->
-    <h2 class="divine-title" style="margin-bottom: 16px;">GET IN TOUCH</h2>
-    <p class="about-text" style="margin-bottom: 45px;">
+    <h2 class="divine-title" style="text-align:center;margin-bottom:16px;">GET IN TOUCH</h2>
+    <p class="about-text" style="margin-bottom:45px;">
       Have questions regarding a specific temple, or wish to share your own divine experiences with us? Feel free to reach out using the contact details below. We would be delighted to hear from you.
     </p>
 
     <div class="contact-cards-container">
-      
+
       <!-- Phone Card -->
-      <div class="contact-card">
+      <div class="contact-card scroll-reveal" data-delay="0.1s">
         <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.5 14.82C16.15 14.7 15.77 14.79 15.5 15.06L13.21 17.35C10.38 15.93 8.06 13.62 6.63 10.79L8.91 8.5C9.18 8.23 9.27 7.84 9.16 7.5C8.8 6.41 8.6 5.22 8.6 3.99C8.6 3.45 8.16 3 7.62 3H4.15C3.58 3 3 3.51 3 4.15C3 13.62 10.38 21 19.85 21C20.49 21 21 20.42 21 19.85V16.38C21 15.83 20.55 15.38 20.01 15.38Z"/>
         </svg>
@@ -107,7 +147,7 @@
       </div>
 
       <!-- Email Card -->
-      <div class="contact-card">
+      <div class="contact-card scroll-reveal" data-delay="0.2s">
         <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
         </svg>
@@ -123,88 +163,41 @@
     </div>
   </section>
 
-  <!-- ============================================
-       PREMIUM FOOTER
-       ============================================ -->
+  <!-- ═══ PREMIUM FOOTER ═══ -->
   <footer class="site-footer">
-    <div class="footer-main">
-      
-      <!-- Brand Column -->
-      <div class="footer-col footer-brand">
-        <div class="footer-logo">
-          <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey Logo">
-          <div class="footer-logo-text">DIVINE<br>JOURNEY</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey" class="footer-logo">
+        <span class="footer-brand-name">DIVINE JOURNEY</span>
+        <p class="footer-tagline">India's sacred temples, explored with depth, devotion, and detail.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html"><i class="fa-solid fa-house gold-icon"></i> Home</a>
+          <a href="temples.html"><i class="fa-solid fa-vihara gold-icon"></i> All Temples</a>
+          <a href="jyotirlinga.html"><i class="fa-solid fa-dharmachakra gold-icon"></i> 12 Jyotirlingas</a>
+          <a href="about.html"><i class="fa-solid fa-hands-praying gold-icon"></i> About Us</a>
         </div>
-        <p class="footer-tagline">
-          A virtual pilgrimage through India's most sacred and ancient temples. Bringing the divine closer to you, wherever you are.
-        </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
-          <a href="#" class="social-link" aria-label="YouTube" title="YouTube">▶️</a>
-          <a href="#" class="social-link" aria-label="Facebook" title="Facebook">📘</a>
-          <a href="#" class="social-link" aria-label="Twitter" title="Twitter">🐦</a>
+        <div class="footer-col">
+          <h4>Temple Sections</h4>
+          <a href="temples.html#char-dham"><i class="fa-solid fa-hands-praying gold-icon"></i> Char Dham</a>
+          <a href="temples.html#shakti-peethas"><i class="fa-solid fa-spa gold-icon"></i> Shakti Peethas</a>
+          <a href="temples.html#south-india"><i class="fa-solid fa-tree gold-icon"></i> South India</a>
+          <a href="temples.html#north-india"><i class="fa-solid fa-mountain gold-icon"></i> North India</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="learnmore.html"><i class="fa-solid fa-graduation-cap gold-icon"></i> Sacred Knowledge</a>
+          <a href="learnmore.html#architecture"><i class="fa-solid fa-archway gold-icon"></i> Architecture Guide</a>
+          <a href="learnmore.html#pilgrimage"><i class="fa-solid fa-person-walking gold-icon"></i> Pilgrimage Tips</a>
+          <a href="about.html"><i class="fa-solid fa-star gold-icon"></i> Our Mission</a>
         </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">Temple Gallery</a></li>
-          <li><a href="learnmore.html">Learn More</a></li>
-        </ul>
-      </div>
-
-      <!-- Popular Temples -->
-      <div class="footer-col">
-        <h4>Sacred Places</h4>
-        <ul class="footer-links">
-          <li><a href="viewpage/KEDARNATH.html">Kedarnath</a></li>
-          <li><a href="viewpage/dwarka.html">Dwarkadhish</a></li>
-          <li><a href="viewpage/MEENAKSHI TEMPLE.html">Meenakshi Temple</a></li>
-          <li><a href="viewpage/Ram Mandir.html">Ram Mandir</a></li>
-          <li><a href="viewpage/Golden Temple.html">Golden Temple</a></li>
-          <li><a href="viewpage/Tirupati Balaji.html">Tirupati Balaji</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-col">
-        <h4>Contact Us</h4>
-        <ul class="footer-contact-list">
-          <li>
-            <span class="contact-icon">📞</span>
-            <div>
-              <a href="tel:+916351816272">+91 63518 16272</a>
-              <a href="tel:+917984018078">+91 79840 18078</a>
-            </div>
-          </li>
-          <li>
-            <span class="contact-icon">✉️</span>
-            <div>
-              <a href="mailto:bhuvakevin108@gmail.com">bhuvakevin108@gmail.com</a>
-              <a href="mailto:savliyameet300@gmail.com">savliyameet300@gmail.com</a>
-            </div>
-          </li>
-          <li>
-            <span class="contact-icon">📍</span>
-            <div>India — Serving Pilgrims Nationwide</div>
-          </li>
-        </ul>
-      </div>
-
     </div>
-
-    <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
-      <p>© 2026 <span>Divine Journey</span> — Built with devotion for the sacred heritage of India. 🙏</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="about.html">Contact</a>
-      </div>
+      <p>&copy; 2026 Divine Journey &mdash; Built for Excellence &amp; Devotion</p>
+      <p class="footer-mantra"><i class="fa-solid fa-om gold-icon"></i> &nbsp;Om Namah Shivaya &nbsp;|&nbsp; Jai Shri Ram &nbsp;|&nbsp; Radhe Radhe &nbsp;<i class="fa-solid fa-om gold-icon"></i></p>
     </div>
   </footer>
 
