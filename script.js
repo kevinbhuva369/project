@@ -131,29 +131,21 @@ const pathPrefix = isViewPage ? '../' : '';
   const btn = document.createElement('button');
   btn.id = 'back-to-top';
   btn.setAttribute('aria-label', 'Back to top');
-  btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
-  Object.assign(btn.style, {
-    position: 'fixed', bottom: '90px', right: '20px', zIndex: '995',
-    width: '44px', height: '44px', borderRadius: '50%',
-    background: 'rgba(2,12,27,0.88)',
-    border: '1px solid rgba(212,160,23,0.45)',
-    color: '#D4A017', fontSize: '1rem',
-    cursor: 'pointer', display: 'none',
-    alignItems: 'center', justifyContent: 'center',
-    backdropFilter: 'blur(10px)',
-    transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
-    boxShadow: '0 4px 20px rgba(0,0,0,0.35)',
-  });
+  btn.innerHTML = '<i class="fa-solid fa-chevron-up gold-icon"></i>';
+  btn.id = 'back-to-top';
+  // Minimal inline to ensure flex centering — rest from CSS
+  btn.style.cssText = 'display:none;align-items:center;justify-content:center;';
+
 
   document.body.appendChild(btn);
 
   window.addEventListener('scroll', () => {
     const show = window.scrollY > 400;
-    btn.style.display = 'flex';
-    btn.style.opacity = show ? '1' : '0';
-    btn.style.transform = show ? 'translateY(0)' : 'translateY(12px)';
-    btn.style.pointerEvents = show ? 'auto' : 'none';
+    btn.style.display  = show ? 'flex' : 'none';
+    btn.style.opacity  = '1';
+    btn.style.transform = 'none';
   }, { passive: true });
+
 
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   btn.addEventListener('mouseenter', () => {
