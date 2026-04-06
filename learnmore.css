@@ -518,7 +518,6 @@ main { margin-top: var(--nav-h); }
   pointer-events: none;
 }
 
---text-on-dark-muted: rgba(255,255,255,0.6);
 
 /* ─── FACTS STRIP ─────────────────────────────────────────────────────────── */
 .lm-facts-strip {
