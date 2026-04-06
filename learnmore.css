@@ -771,3 +771,96 @@ main { margin-top: var(--nav-h); }
   .lm-facts-strip { grid-template-columns: 1fr; }
   .ab-stats-premium { grid-template-columns: 1fr; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   VISIBILITY & CONTRAST FIXES — lm-white / lm-cream / lm-warm sections
+   All text on light backgrounds must be clearly dark/visible.
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* Light section headings */
+.lm-white  .lm-section-header h2,
+.lm-cream  .lm-section-header h2,
+.lm-warm   .lm-section-header h2 { color: var(--deep-maroon); }
+
+.lm-white  .lm-section-header p,
+.lm-cream  .lm-section-header p,
+.lm-warm   .lm-section-header p  { color: rgba(26,10,0,0.65); }
+
+.lm-white  .lm-section-tag,
+.lm-cream  .lm-section-tag,
+.lm-warm   .lm-section-tag       { color: var(--gold); background: rgba(212,160,23,0.1); border-color: rgba(212,160,23,0.28); }
+
+/* Card text in light sections */
+.lm-white  .lm-card h3,
+.lm-cream  .lm-card h3,
+.lm-warm   .lm-card h3           { color: var(--deep-maroon); }
+
+.lm-white  .lm-card p,
+.lm-cream  .lm-card p,
+.lm-warm   .lm-card p            { color: rgba(26,10,0,0.65); }
+
+.lm-white  .lm-card-icon,
+.lm-cream  .lm-card-icon,
+.lm-warm   .lm-card-icon         { color: var(--gold); }
+
+/* Arch types in light sections */
+.lm-white  .lm-arch-type h3,
+.lm-cream  .lm-arch-type h3      { color: var(--deep-maroon); }
+
+.lm-white  .lm-arch-type p,
+.lm-cream  .lm-arch-type p       { color: rgba(26,10,0,0.62); }
+
+/* Steps in light sections */
+.lm-white  .lm-step h3,
+.lm-cream  .lm-step h3           { color: var(--deep-maroon); }
+
+.lm-white  .lm-step p,
+.lm-cream  .lm-step p            { color: rgba(26,10,0,0.65); }
+
+/* Fact items */
+.lm-fact-num  { color: var(--gold); }
+.lm-fact-title { color: var(--deep-maroon); font-weight: 700; }
+.lm-fact-desc  { color: rgba(26,10,0,0.6); }
+
+/* FAQ on light */
+.lm-faq-q { color: var(--deep-maroon); }
+.lm-faq-a { color: rgba(26,10,0,0.68); }
+
+/* Section stat rows (always on dark) */
+.lm-stat-num   { color: var(--gold-vibrant) !important; text-shadow: 0 0 12px rgba(255,215,0,0.4); }
+.lm-stat-label { color: rgba(255,255,255,0.5); }
+
+/* Dark section fixes */
+.lm-dark .lm-section-header h2 { color: #fff; }
+.lm-dark .lm-section-header p  { color: rgba(255,255,255,0.62); }
+.lm-dark .lm-section-tag       { color: var(--gold-light); border-color: rgba(212,160,23,0.3); background: rgba(212,160,23,0.08); }
+
+/* ─── ENHANCED CARD GRID — 2 columns on tablets ─────────────────────────── */
+@media (max-width: 900px) {
+  .lm-card-grid { grid-template-columns: repeat(2, 1fr); }
+  .lm-card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .lm-card-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .lm-steps { grid-template-columns: repeat(2, 1fr); }
+  .lm-arch-types { grid-template-columns: repeat(3, 1fr); }
+  .lm-facts-strip { grid-template-columns: repeat(3, 1fr); }
+  .ab-stats-premium { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ─── TIMELINE ENHANCED ──────────────────────────────────────────────────── */
+.lm-tl-dot { background: var(--gold); box-shadow: 0 0 14px rgba(255,215,0,0.55); }
+.lm-tl-year { color: var(--gold-light); font-weight: 600; }
+.lm-tl-content h3 { color: var(--gold-light); }
+.lm-tl-content p  { color: rgba(255,255,255,0.65); }
+
+/* ─── PULL QUOTE ON DARK ──────────────────────────────────────────────────  */
+.lm-dark .lm-pull-quote {
+  background: rgba(255,255,255,0.04);
+  border-left-color: var(--gold);
+}
+.lm-dark .lm-pull-quote blockquote { color: rgba(255,255,255,0.82); }
+.lm-dark .lm-pull-quote cite { color: var(--gold); }
+
+/* Cream / white pull quote */
+.lm-cream .lm-pull-quote blockquote,
+.lm-white .lm-pull-quote blockquote { color: var(--deep-maroon); }
+
