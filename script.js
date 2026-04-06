@@ -112,7 +112,8 @@ const templeDatabase = [
     {
         "name": "Dwarkadhish Temple",
         "location": "Gujarat",
-        "image": "images/dwarka_temple.png"
+        "image": "images/dwarka_temple.png",
+        "file": "dwarka"
     },
     {
         "name": "Shree Jagannatha Temple",
@@ -291,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h3>${highlightedName}</h3>
                         <p>📍 ${highlightedLoc}</p>
                         <div class="btn">
-                            <button onclick="window.location.href='${prefix}viewpage/${temple.name}.html'">View More</button>
+                            <button onclick="window.location.href='${prefix}viewpage/${temple.file || temple.name}.html'">View More</button>
                         </div>
                     </div>
                 `;
