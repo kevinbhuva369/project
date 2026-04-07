@@ -256,14 +256,6 @@ body {
   font-size: 1.8rem;
 }
 
-/* ─── INFORMATION LAYOUT ─────────────────────────────────────────────────── */
-.info-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
 
 /* ─── DROP CAP LAYOUT (PHOTO ON LEFT, ALL TEXT ON RIGHT) ───────────── */
 .drop-cap-paragraph {
