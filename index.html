@@ -1,57 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  ╔══════════════════════════════════════════════════════════════════════════╗
-  ║  DIVINE JOURNEY — index.html (HOME PAGE)                               ║
-  ║  The main landing page of the platform.                                ║
-  ║                                                                         ║
-  ║  PAGE STRUCTURE:                                                        ║
-  ║  1. <head>          → Fonts, CSS links, meta tags, favicon              ║
-  ║  2. <header>        → Top navigation bar (nav-main)                     ║
-  ║  3. .nav-overlay    → Full-screen mobile menu (toggled by hamburger)    ║
-  ║  4. .bottom-nav     → Mobile-only sticky bottom navigation bar         ║
-  ║  5. .hero-section   → Full-screen cinematic hero with animated stats   ║
-  ║  6. .info-section   → Centered tagline strip with gold icons            ║
-  ║  7. .popular-section → Featured temple card grid (12 cards)            ║
-  ║  8. .features-section → 4 "Why Divine Journey" feature cards           ║
-  ║  9. .jyotir-cta     → Jyotirlinga call-to-action dark section          ║
-  ║  10. <footer>       → Site footer with links, mantra, copyright        ║
-  ║                                                                         ║
-  ║  ANIMATIONS:                                                            ║
-  ║  - .scroll-reveal   → Fade + slide up as element enters viewport       ║
-  ║  - .stat-number     → Counts from 0 to data-target on scroll           ║
-  ║  - .classic-stagger → Temple cards stagger in with data-delay           ║
-  ║  - .reveal-init / .reveal-active → Used by JS IntersectionObserver     ║
-  ║                                                                         ║
-  ║  CSS FILES:                                                             ║
-  ║  - style.css    → Global styles (nav, footer, cards, animations)       ║
-  ║  - index.css    → Home-page specific styles (hero, sections)           ║
-  ║  JS FILE:                                                               ║
-  ║  - script.js    → All animations, search, counters, hamburger menu     ║
-  ╚══════════════════════════════════════════════════════════════════════════╝
--->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divine Journey | Home — India's Sacred Temple Heritage</title>
   <meta name="description" content="Divine Journey — India's most complete sacred temple platform. Explore 89 temples, 12 Jyotirlingas, architecture, history, pilgrimage guides and spiritual wisdom.">
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
   <link rel="shortcut icon" href="colorful-arabesque-mandala-pattern-background_492473-352.avif" type="image/x-icon">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- ═══ NAVIGATION ═══ -->
   <header>
     <nav class="nav-main">
       <a href="index.html" class="nav-icon">
-        <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey Logo" id="icon">
         <span class="logo-text">DIVINE JOURNEY</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
@@ -60,14 +24,13 @@
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="temples.html">TEMPLES</a></li>
         <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
-                <li class="nav-search-container">
-          <button id="searchBtn" class="premium-nav-search" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-text-nav">Search</span></button>
+        <li class="nav-search-container">
+          <button id="searchBtn" class="premium-nav-search" title="Search"><span class="search-text-nav">Search</span></button>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- ═══ FULL-SCREEN OVERLAY (Mobile) ═══ -->
   <div class="nav-overlay" id="navOverlay">
     <div class="nav-overlay-content">
       <a href="index.html" class="overlay-link active">HOME</a>
@@ -77,26 +40,21 @@
       <a href="learnmore.html" class="overlay-link">KNOWLEDGE</a>
     </div>
     <div class="nav-overlay-footer">
-      <p><i class="fa-solid fa-om gold-icon"></i> Divine Journey — India's Sacred Heritage</p>
+      <p>Divine Journey — India's Sacred Heritage</p>
     </div>
   </div>
 
-  <!-- ═══ BOTTOM NAVIGATION (Mobile Only) ═══ -->
   <nav class="bottom-nav">
     <a href="index.html" class="bottom-nav-item active">
-      <i class="fa-solid fa-house gold-icon"></i>
       <span>Home</span>
     </a>
     <a href="temples.html" class="bottom-nav-item">
-      <i class="fa-solid fa-vihara gold-icon"></i>
       <span>Temples</span>
     </a>
     <a href="jyotirlinga.html" class="bottom-nav-item">
-      <i class="fa-solid fa-gopuram gold-icon"></i>
       <span>Jyotir</span>
     </a>
     <a href="#" class="bottom-nav-item" id="mobileSearchTrigger">
-      <i class="fa-solid fa-magnifying-glass gold-icon"></i>
       <span>Search</span>
     </a>
   </nav>
@@ -105,23 +63,10 @@
 
   <main class="main-section">
 
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       SECTION 1: HERO SECTION
-       Full-viewport background image with dark overlay (rgba gradient).
-       Contains:
-         - .hero-tag    → small badge label at top
-         - <h1>         → main heading
-         - .hero-btns   → two CTA buttons (Explore Temples / Sacred Knowledge)
-         - .hero-stats  → 4 animated counters (89 Temples, 12 Jyotirlingas, 5000 Years, 28 States)
-                          Uses .stat-number with data-target attribute
-       Background: CSS variable --hero-bg or inline style in index.css
-  ════════════════════════════════════════════════════════════════════════ -->
-  <!-- ═══ HERO SECTION ═══ -->
     <section class="hero-section">
       <div class="hero-overlay"></div>
       <div class="content-section">
-        <span class="hero-tag"><i class="fa-solid fa-om gold-icon"></i> Explore India's Sacred Heritage</span>
+        <span class="hero-tag">Explore India's Sacred Heritage</span>
         <h1>EXPERIENCE THE DIVINE ESSENCE<br>OF ANCIENT INDIA</h1>
         <p>Journey through the sacred corridors of time. Explore the detailed histories, breathtaking architectural wonders, and spiritual significance of India's most revered temples — all in one place.</p>
         <div class="hero-btns">
@@ -140,46 +85,19 @@
       </div>
     </section>
 
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         SECTION 2: INFO STRIP
-         A centered banner strip between Hero and Temples.
-         Displays a Sanskrit-style tagline with gold icons on both sides.
-         Icons: CDN-loaded transparent PNG, styled with .img-gold-icon
-    ════════════════════════════════════════════════════════════════════════ -->
-    <!-- ═══ INFO STRIP ═══ -->
     <section class="info-section">
       <div class="info-container">
-        <div class="info-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/2413/2413550.png" alt="Sacred Symbol" class="img-gold-icon">
-        </div>
         <div class="text-content">
           <h2 class="divine-title">A HUB OF SPIRITUAL GROWTH</h2>
           <p>Stop for a moment in a sanctuary of peace and enlightenment. Achieve a serene state of mindfulness, insight, and spirituality. Welcome home.</p>
         </div>
-        <div class="info-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/2413/2413550.png" alt="Sacred Symbol" class="img-gold-icon">
-        </div>
       </div>
     </section>
 
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         SECTION 3: FEATURED TEMPLES (Popular Section)
-         Grid of 12 temple cards (.temple-grid.classic-stagger).
-         Each .temple-card has:
-           - .card-img-container  → image area with hover zoom effect
-           - .card-img            → background-image: url(images/<name>.png)
-           - .card-location-badge → links to #location anchor on view page
-           - .card-body           → title, description, "View More" button
-         Cards animate on scroll: .scroll-reveal + data-delay for stagger.
-         Links: viewpage/<TempleName>.html
-    ════════════════════════════════════════════════════════════════════════ -->
-    <!-- ═══ FEATURED TEMPLES ═══ -->
     <section class="popular-section">
       <div class="section-intro scroll-reveal">
         <span class="section-tag">Divine Selection</span>
-        <h2 class="divine-title"><i class="fa-solid fa-star gold-icon"></i> MOST POPULAR SACRED TEMPLES</h2>
+        <h2 class="divine-title">MOST POPULAR SACRED TEMPLES</h2>
         <p class="section-sub">A curated selection of India's most spiritually potent and architecturally significant shrines, visited by millions of seekers annually.</p>
       </div>
 
@@ -188,7 +106,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.1s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/prem_mandir.png');"></div>
-            <a href="viewpage/Prem Mandir.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Vrindavan, UP</a>
+            <a href="viewpage/Prem Mandir.html#location" class="card-location-badge">Vrindavan, UP</a>
           </div>
           <div class="card-body">
             <h3>Prem Mandir</h3>
@@ -200,7 +118,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.2s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/keli_kunj.png');"></div>
-            <a href="viewpage/Shri Hit Radha Keli Kunj.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Vrindavan, UP</a>
+            <a href="viewpage/Shri Hit Radha Keli Kunj.html#location" class="card-location-badge">Vrindavan, UP</a>
           </div>
           <div class="card-body">
             <h3>Shri Hit Radha Keli Kunj</h3>
@@ -212,7 +130,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.3s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/meenakshi_temple.png');"></div>
-            <a href="viewpage/Meenakshi Temple.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Madurai, TN</a>
+            <a href="viewpage/Meenakshi Temple.html#location" class="card-location-badge">Madurai, TN</a>
           </div>
           <div class="card-body">
             <h3>Meenakshi Temple</h3>
@@ -224,7 +142,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.1s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/kedarnath_temple.png');"></div>
-            <a href="viewpage/Kedarnath.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Rudraprayag, UK</a>
+            <a href="viewpage/Kedarnath.html#location" class="card-location-badge">Rudraprayag, UK</a>
           </div>
           <div class="card-body">
             <h3>Kedarnath Temple</h3>
@@ -236,7 +154,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.2s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/konark_sun_temple.png');"></div>
-            <a href="viewpage/Konark Sun Temple.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Puri, Odisha</a>
+            <a href="viewpage/Konark Sun Temple.html#location" class="card-location-badge">Puri, Odisha</a>
           </div>
           <div class="card-body">
             <h3>Konark Sun Temple</h3>
@@ -248,7 +166,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.3s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/dwarka_temple.png');"></div>
-            <a href="viewpage/dwarka.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Dwarka, Gujarat</a>
+            <a href="viewpage/dwarka.html#location" class="card-location-badge">Dwarka, Gujarat</a>
           </div>
           <div class="card-body">
             <h3>Dwarkadhish Temple</h3>
@@ -260,7 +178,7 @@
         <div class="temple-card">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/trijuginarayan_temple.png');"></div>
-            <a href="viewpage/Trijuginarayan.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Rudraprayag, Uttarakhand</a>
+            <a href="viewpage/Trijuginarayan.html#location" class="card-location-badge">Rudraprayag, Uttarakhand</a>
           </div>
           <div class="card-body">
             <h3>Trijuginarayan Temple</h3>
@@ -272,7 +190,7 @@
         <div class="temple-card">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/somnath_temple.png');"></div>
-            <a href="viewpage/Somnath Temple.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Veraval, Gujarat</a>
+            <a href="viewpage/Somnath Temple.html#location" class="card-location-badge">Veraval, Gujarat</a>
           </div>
           <div class="card-body">
             <h3>Somnath Temple</h3>
@@ -281,11 +199,10 @@
           </div>
         </div>
 
-
         <div class="temple-card scroll-reveal" data-delay="0.1s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/gangotri.png');"></div>
-            <a href="viewpage/Gangotri.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Uttarkashi, UK</a>
+            <a href="viewpage/Gangotri.html#location" class="card-location-badge">Uttarkashi, UK</a>
           </div>
           <div class="card-body">
             <h3>Gangotri Temple</h3>
@@ -297,7 +214,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.2s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/thanjavur_brihadeeswara_real.png');"></div>
-            <a href="viewpage/Thanjavur Brihadeeswara.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Thanjavur, TN</a>
+            <a href="viewpage/Thanjavur Brihadeeswara.html#location" class="card-location-badge">Thanjavur, TN</a>
           </div>
           <div class="card-body">
             <h3>Thanjavur Brihadeeswara</h3>
@@ -309,7 +226,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.3s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/kashi_vishwanath_temple.png');"></div>
-            <a href="viewpage/Kashi Vishwanath.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Varanasi, UP</a>
+            <a href="viewpage/Kashi Vishwanath.html#location" class="card-location-badge">Varanasi, UP</a>
           </div>
           <div class="card-body">
             <h3>Kashi Vishwanath</h3>
@@ -321,7 +238,7 @@
         <div class="temple-card scroll-reveal" data-delay="0.4s">
           <div class="card-img-container">
             <div class="card-img" style="background-image: url('images/ram_mandir.png');"></div>
-            <a href="viewpage/Ram Mandir.html#location" class="card-location-badge"><i class="fa-solid fa-location-dot"></i> Ayodhya, UP</a>
+            <a href="viewpage/Ram Mandir.html#location" class="card-location-badge">Ayodhya, UP</a>
           </div>
           <div class="card-body">
             <h3>Ram Mandir</h3>
@@ -336,41 +253,26 @@
       </div>
     </section>
 
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         SECTION 4: WHY DIVINE JOURNEY (Features Section)
-         4 feature cards on a dark-background section.
-         Each .feature-card has:
-           - .feat-icon-ring  → golden circular icon container
-           - <h3>             → title (some with .stat-number counters)
-           - <p>              → description text
-         Background: from index.css .features-section (dark navy gradient)
-    ════════════════════════════════════════════════════════════════════════ -->
-    <!-- ═══ WHY DIVINE JOURNEY ═══ -->
     <section class="features-section">
       <div class="features-inner">
         <div class="section-intro">
           <span class="section-tag">Why Choose Us</span>
-          <h2 class="divine-title"><i class="fa-solid fa-award gold-icon"></i> WHAT MAKES DIVINE JOURNEY SPECIAL</h2>
+          <h2 class="divine-title">WHAT MAKES DIVINE JOURNEY SPECIAL</h2>
         </div>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feat-icon-ring"><i class="fa-solid fa-vihara gold-icon"></i></div>
             <h3><span class="stat-number" data-target="89" data-suffix="+">0</span>+ Premium Temple Pages</h3>
             <p>Every temple documented with cinematic history, Vastu architecture, and interactive GPS guided maps.</p>
           </div>
           <div class="feature-card">
-            <div class="feat-icon-ring"><i class="fa-solid fa-gopuram gold-icon"></i></div>
             <h3><span class="stat-number" data-target="12">0</span> Jyotirlingas Unlocked</h3>
             <p>Explore the 12 most potent Shiva shrines with dedicated research, high-quality darshan guides and history.</p>
           </div>
           <div class="feature-card">
-            <div class="feat-icon-ring"><i class="fa-solid fa-book-open gold-icon"></i></div>
             <h3>Sacred Knowledge Hub</h3>
             <p>Go beyond sightseeing. Learn the science of rituals, temple acoustics, and ancient Vastu Shastra principles.</p>
           </div>
           <div class="feature-card">
-            <div class="feat-icon-ring"><i class="fa-solid fa-magnifying-glass-chart gold-icon"></i></div>
             <h3>Intelligent Temple Search</h3>
             <p>Instantly find any shrine by deity, state, or era with our ultra-fast, high-precision search engine.</p>
           </div>
@@ -378,18 +280,10 @@
       </div>
     </section>
 
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         SECTION 5: JYOTIRLINGA CTA
-         Dark gold-accented call-to-action banner for the 12 Jyotirlingas page.
-         Contains a .jyotir-tag, h2, description, and a link button.
-         .classic-stagger → animates child elements with staggered delays.
-    ════════════════════════════════════════════════════════════════════════ -->
-    <!-- ═══ JYOTIRLINGA CTA ═══ -->
     <section class="jyotir-cta classic-stagger">
       <div class="jyotir-cta-inner">
         <span class="jyotir-tag">Lord Shiva's <span class="stat-number" data-target="12">0</span> Sacred Manifestations</span>
-        <h2><i class="fa-solid fa-gopuram"></i> Explore the <span class="stat-number" data-target="12">0</span> Jyotirlingas</h2>
+        <h2>Explore the <span class="stat-number" data-target="12">0</span> Jyotirlingas</h2>
         <p>From Somnath in Gujarat to Ramanathaswamy in Tamil Nadu — the 12 most potent Shiva shrines in existence, individually documented with full history and travel guides.</p>
         <a href="jyotirlinga.html" class="jyotir-btn">Begin Jyotirlinga Journey →</a>
       </div>
@@ -397,49 +291,39 @@
 
   </main>
 
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       SECTION 6: PREMIUM FOOTER
-       3-column footer with brand name, navigation links, and bottom bar.
-       Columns: Explore / Temple Sections / Learn
-       Footer bottom: copyright, mantra text with gold OM icons
-       Icons: Font Awesome .gold-icon class for golden coloring
-  ════════════════════════════════════════════════════════════════════════ -->
-  <!-- ═══ PREMIUM FOOTER ═══ -->
   <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey" class="footer-logo">
       <span class="footer-brand-name">DIVINE JOURNEY</span>
       <p class="footer-tagline">India's sacred temples, explored with depth, devotion, and detail.</p>
     </div>
     <div class="footer-links">
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="index.html"><i class="fa-solid fa-house gold-icon"></i> Home</a>
-        <a href="temples.html"><i class="fa-solid fa-vihara gold-icon"></i> All Temples</a>
-        <a href="jyotirlinga.html"><i class="fa-solid fa-dharmachakra gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
-        <a href="about.html"><i class="fa-solid fa-hands-praying gold-icon"></i> About Us</a>
+        <a href="index.html">Home</a>
+        <a href="temples.html">All Temples</a>
+        <a href="jyotirlinga.html"><span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="about.html">About Us</a>
       </div>
       <div class="footer-col">
         <h4>Temple Sections</h4>
-        <a href="temples.html#jyotirlingas"><i class="fa-solid fa-gopuram gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
-        <a href="temples.html#char-dham"><i class="fa-solid fa-hands-praying gold-icon"></i> Char Dham</a>
-        <a href="temples.html#shakti-peethas"><i class="fa-solid fa-spa gold-icon"></i> Shakti Peethas</a>
-        <a href="temples.html#south-india"><i class="fa-solid fa-tree gold-icon"></i> South India</a>
+        <a href="temples.html#jyotirlingas"><span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="temples.html#char-dham">Char Dham</a>
+        <a href="temples.html#shakti-peethas">Shakti Peethas</a>
+        <a href="temples.html#south-india">South India</a>
       </div>
       <div class="footer-col">
         <h4>Learn</h4>
-        <a href="learnmore.html"><i class="fa-solid fa-graduation-cap gold-icon"></i> Sacred Knowledge</a>
-        <a href="learnmore.html"><i class="fa-solid fa-archway gold-icon"></i> Architecture Guide</a>
-        <a href="learnmore.html"><i class="fa-solid fa-person-walking gold-icon"></i> Pilgrimage Tips</a>
-        <a href="about.html"><i class="fa-solid fa-star gold-icon"></i> Our Mission</a>
+        <a href="learnmore.html">Sacred Knowledge</a>
+        <a href="learnmore.html">Architecture Guide</a>
+        <a href="learnmore.html">Pilgrimage Tips</a>
+        <a href="about.html">Our Mission</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Divine Journey &mdash; Built for Excellence &amp; Devotion</p>
-    <p class="footer-mantra"><i class="fa-solid fa-om gold-icon"></i> &nbsp;Om Namah Shivaya &nbsp;|&nbsp; Jai Shri Ram &nbsp;|&nbsp; Radhe Radhe &nbsp;<i class="fa-solid fa-om gold-icon"></i></p>
+    <p class="footer-mantra">&nbsp;Om Namah Shivaya &nbsp;|&nbsp; Jai Shri Ram &nbsp;|&nbsp; Radhe Radhe &nbsp;</p>
   </div>
 </footer>
 
