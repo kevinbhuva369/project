@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,20 +79,6 @@
         font-size: clamp(1.1rem, 2.5vw, 1.6rem);
         line-height: 1.2;
       }
-      .cat-count {
-        margin-left: auto;
-        background: var(--gold-vibrant, #FFD700);
-        color: var(--maroon-deeper, #020C1B);
-        font-family: 'Cinzel Decorative', cursive;
-        font-size: 0.85rem;
-        font-weight: 800;
-        padding: 6px 16px;
-        border-radius: 20px;
-        white-space: nowrap;
-        flex-shrink: 0;
-        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        border: 1px solid rgba(2, 12, 27, 0.1);
-      }
 
       /* Dark section variant */
       .cat-section-dark { background: linear-gradient(160deg, var(--maroon-deeper) 0%, var(--deep-maroon) 60%, var(--maroon-darker, #010810) 100%); }
@@ -133,7 +118,6 @@
         </nav>
     </header>
 
-    <!-- ═══ FULL-SCREEN OVERLAY (Mobile) ═══ -->
     <div class="nav-overlay" id="navOverlay">
       <div class="nav-overlay-content">
         <a href="index.html" class="overlay-link">HOME</a>
@@ -147,7 +131,6 @@
       </div>
     </div>
 
-    <!-- ═══ BOTTOM NAVIGATION (Mobile Only) ═══ -->
     <nav class="bottom-nav">
       <a href="index.html" class="bottom-nav-item">
         <i class="fa-solid fa-house gold-icon"></i>
@@ -167,20 +150,17 @@
       </a>
     </nav>
 
-    <!-- Search Results Overlay -->
     <div id="search-results-overlay" class="search-results-overlay" style="display:none;"></div>
 
     <main>
 
 
-        <!-- HERO -->
         <section class="gallery-hero scroll-reveal">
             <div class="hero-tag">A Pilgrimage Through Time</div>
             <h1 class="divine-title"><i class="fa-solid fa-map-location-dot gold-icon"></i> Exploring the <span class="stat-number" data-target="89">0</span> Sacred Temples</h1>
             <p>From the snow-capped peaks of the Himalayas to the golden coasts of the South, explore India's spiritual architecture in exhaustive detail. <a href="jyotirlinga.html" style="color:var(--gold,var(--gold));">Explore <span class="stat-number" data-target="12">0</span> Jyotirlingas separately →</a></p>
         </section>
 
-        <!-- STICKY SECTION NAV -->
         <nav class="section-nav-strip" aria-label="Temple Categories">
           <div class="section-nav-inner">
             <a href="#char-dham" class="snav-link"><i class="fa-solid fa-hands-praying gold-icon"></i> Char Dham</a>
@@ -195,8 +175,6 @@
         </nav>
 
 
-        <!-- SECTION 2: CHAR DHAM                 -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-cream" id="char-dham">
           <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-hands-praying gold-icon"></i></span>
@@ -204,7 +182,6 @@
               <span class="cat-label">India's Four Sacred Abodes</span>
               <span class="cat-name">Char Dham &amp; Chota Char Dham</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="8">0</span> Temples</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Badrinath.html" class="gallery-item scroll-reveal" data-delay="0.1s" style="display:block;">
@@ -242,9 +219,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 3: SHAKTI PEETHAS            -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-dark" id="shakti-peethas">
           <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-spa gold-icon"></i></span>
@@ -252,7 +226,6 @@
               <span class="cat-label">Goddess Sati's Sacred Sites</span>
               <span class="cat-name" style="color:#fff;">Shakti Peethas</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="6">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Kamakhya Temple.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -282,9 +255,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 4: NORTH INDIA               -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-cream" id="north-india">
           <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-mountain gold-icon"></i></span>
@@ -292,7 +262,6 @@
               <span class="cat-label">UP, Delhi, Rajasthan, Himachal, Uttarakhand</span>
               <span class="cat-name">North India Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="12">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Ram Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -346,9 +315,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 5: SOUTH INDIA               -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-dark" id="south-india">
           <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-gopuram gold-icon"></i></span>
@@ -356,7 +322,6 @@
               <span class="cat-label">Tamil Nadu, Andhra Pradesh, Karnataka, Kerala</span>
               <span class="cat-name" style="color:#fff;">South India Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="12">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/MEENAKSHI TEMPLE.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -410,9 +375,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 6: EAST INDIA                -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-cream" id="east-india">
           <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-water gold-icon"></i></span>
@@ -420,7 +382,6 @@
               <span class="cat-label">West Bengal, Odisha, Assam, Jharkhand</span>
               <span class="cat-name">East India Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="8">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Shree Jagannatha Temple.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -458,9 +419,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 7: WEST INDIA                -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-dark" id="west-india">
           <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-sun"></i></span>
@@ -468,7 +426,6 @@
               <span class="cat-label">Gujarat, Maharashtra, Rajasthan</span>
               <span class="cat-name" style="color:#fff;">West India Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="10">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Somnath Temple.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -514,9 +471,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 8: MODERN & ICONIC TEMPLES   -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-cream" id="modern-temples">
           <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
@@ -524,7 +478,6 @@
               <span class="cat-label">Contemporary Sacred Architecture</span>
               <span class="cat-name">Modern &amp; Iconic Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="7">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Ram Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -558,9 +511,6 @@
           </div>
         </section>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- SECTION 9: KRISHNA TEMPLES           -->
-        <!-- ══════════════════════════════════════ -->
         <section class="cat-section cat-section-dark" id="krishna-temples">
           <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
             <span class="cat-icon"><i class="fa-solid fa-feather"></i></span>
@@ -568,7 +518,6 @@
               <span class="cat-label">Devotion to Lord Krishna</span>
               <span class="cat-name" style="color:#fff;">Krishna &amp; Vrindavan Temples</span>
             </div>
-            <span class="cat-count"><span class="stat-number" data-target="6">0</span> Shown</span>
           </div>
           <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
             <a href="viewpage/Prem Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
@@ -600,7 +549,6 @@
 
     </main>
 
-    <!-- PREMIUM FOOTER -->
     <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
