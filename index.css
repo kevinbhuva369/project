@@ -159,6 +159,10 @@
 .hero-stat {
   padding: 0 24px;
   text-align: center;
+  border-right: 1px solid rgba(212,160,23,0.3);
+}
+.hero-stat:last-child {
+  border-right: none;
 }
 
 .hs-num {
@@ -180,12 +184,6 @@
   margin-top: 3px;
 }
 
-.hero-stat-div {
-  width: 1px;
-  height: 36px;
-  background: rgba(212,160,23,0.3);
-  flex-shrink: 0;
-}
 
 /* ─── INFO STRIP ─────────────────────────────────────────────────────────── */
 .info-section {
@@ -415,7 +413,7 @@
 }
 
 @media (max-width: 500px) {
-  .hero-stats { flex-direction: column; border-radius: 16px; }
-  .hero-stat-div { width: 60px; height: 1px; }
-  .features-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: column; border-radius: 16px; width: 100%; padding: 24px 16px; gap: 16px; }
+  .hero-stat { border-right: none; border-bottom: 1px solid rgba(212,160,23,0.2); padding-bottom: 12px; width: 100%; }
+  .hero-stat:last-child { border-bottom: none; }
 }
