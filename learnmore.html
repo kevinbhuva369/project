@@ -20,15 +20,28 @@
       <span class="logo-text">DIVINE JOURNEY</span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links-desktop">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="temples.html">TEMPLES</a></li>
-      <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
-      <li class="nav-search-container">
+      <ul class="nav-links-desktop">
+        <li class="back-btn"><a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> BACK</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li>
+          <a href="temples.html">TEMPLES <i class="fa-solid fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="temples.html#char-dham">Char Dham</a></li>
+            <li><a href="temples.html#shakti-peethas">Shakti Peethas</a></li>
+            <li><a href="temples.html#north-india">North India</a></li>
+            <li><a href="temples.html#south-india">South India</a></li>
+            <li><a href="temples.html#east-india">East India</a></li>
+            <li><a href="temples.html#west-india">West India</a></li>
+            <li><a href="temples.html#modern-temples">Modern Temples</a></li>
+            <li><a href="temples.html#krishna-temples">Krishna Temples</a></li>
+          </ul>
+        </li>
+        <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
+        <li class="nav-search-container">
           <button id="searchBtn" class="premium-nav-search" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-text-nav">Search</span></button>
         </li>
-    </ul>
+      </ul>
   </nav>
 </header>
 
