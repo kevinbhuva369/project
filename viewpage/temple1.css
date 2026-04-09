@@ -259,23 +259,23 @@ body {
 
 /* ─── DROP CAP LAYOUT (PHOTO ON LEFT, ALL TEXT ON RIGHT) ───────────── */
 .drop-cap-paragraph {
-  display: grid;
-  grid-template-columns: 450px 1fr; 
-  column-gap: 50px;
-  row-gap: 20px;
-  align-items: start; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .inline-history-img {
-  grid-column: 1; 
-  grid-row: 1 / span 10; 
   width: 100%;
+  max-width: 600px;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   aspect-ratio: 4/3;
   object-fit: cover;
   transition: transform 0.5s ease;
+  margin: 0 auto;
 }
 
 .inline-history-img:hover {
@@ -283,22 +283,21 @@ body {
 }
 
 .drop-cap-paragraph p {
-  grid-column: 2; 
   color: #444;
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0; 
-  text-align: left; 
+  text-align: center; 
+  max-width: 800px;
 }
 
 .drop-cap-paragraph p:first-of-type::first-letter {
-  float: left;
   font-family: var(--font-heading);
   font-size: 4rem;
   color: var(--deep-maroon, #800000);
-  line-height: 0.8;
-  margin-right: 12px;
-  margin-top: 8px;
+  line-height: 1;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 /* ─── DETAIL CARDS (CLEAN & MODERN) ──────────────────────────────────────── */
@@ -317,6 +316,7 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
   position: relative;
+  text-align: center;
 }
 
 .detail-card:hover {
@@ -332,6 +332,7 @@ body {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -352,11 +353,12 @@ body {
 /* ─── SPIRITUAL QUOTE ─────────────────────────────────────────────────────── */
 .spiritual-quote {
   background: #fdfbf7;
-  border-left: 5px solid var(--gold-vibrant, #ffd700);
-  border-radius: 0 16px 16px 0;
+  border-radius: 16px;
   padding: 40px 50px;
   margin: 60px 0;
   position: relative;
+  text-align: center;
+  border-bottom: 4px solid var(--gold-vibrant, #ffd700);
 }
 
 .spiritual-quote blockquote {

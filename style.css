@@ -121,6 +121,8 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
 /* Desktop links */
 .nav-links-desktop { display: flex; align-items: center; gap: 4px; }
 
+.nav-links-desktop li { position: relative; }
+
 .nav-links-desktop li a {
   font-family: var(--font-body);
   font-size: 0.72rem;
@@ -147,6 +149,63 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
 .nav-links-desktop li a.active { color: var(--gold-light); }
 .nav-links-desktop li a:hover::after,
 .nav-links-desktop li a.active::after { left: 12px; right: 12px; }
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(2, 12, 27, 0.98);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  border-radius: var(--radius-md);
+  padding: 15px 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s var(--ease);
+  box-shadow: var(--shadow-dark);
+  z-index: 1100;
+}
+
+.nav-links-desktop li:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 25px !important;
+  font-size: 0.7rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s !important;
+}
+
+.dropdown-menu li a::after { display: none; }
+
+.dropdown-menu li a:hover {
+  background: rgba(212, 160, 23, 0.1);
+  color: var(--gold-vibrant) !important;
+  padding-left: 30px !important;
+}
+
+/* Back Button Specific Styling */
+.back-btn a {
+  color: var(--gold-light) !important;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  background: rgba(212, 160, 23, 0.08);
+}
+.back-btn a:hover {
+  background: var(--gold) !important;
+  color: var(--maroon-deeper) !important;
+}
 
 /* Search button */
 .premium-nav-search {
