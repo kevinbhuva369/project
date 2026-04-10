@@ -555,25 +555,29 @@ const pathPrefix = isViewPage ? '../' : '';
 })();
 
 
+const APP_VERSION = '1.0.1'; // Matches version.json
+
 /* ──────────────────────────────────────────────────────────────────────────
-   16. PWA SERVICE WORKER & UPDATE LOGIC
+   16. PWA SERVICE WORKER & UPDATE LOGIC (Live Update API)
    ────────────────────────────────────────────────────────────────────────── */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js').then(reg => {
       console.log('✦ SW Registered');
 
-      // Check for updates
+      // 1. Browser-level update detection
       reg.addEventListener('updatefound', () => {
         const newWorker = reg.installing;
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // New version available!
-            const toast = document.getElementById('pwa-update-toast');
-            if (toast) toast.classList.add('show');
+            showUpdateToast();
           }
         });
       });
+
+      // 2. Custom Live Update API Check (Version API)
+      checkUpdateAPI();
+
     }).catch(err => console.error('SW Registration Failed', err));
   });
 
@@ -584,6 +588,24 @@ if ('serviceWorker' in navigator) {
       refreshing = true;
     }
   });
+}
+
+async function checkUpdateAPI() {
+  try {
+    const res = await fetch('version.json?t=' + Date.now());
+    const data = await res.json();
+    if (data.version !== APP_VERSION) {
+      console.log('✦ Live Update: New version detected via API');
+      showUpdateToast();
+    }
+  } catch (e) {
+    console.warn('✦ Update API Check Failed', e);
+  }
+}
+
+function showUpdateToast() {
+  const toast = document.getElementById('pwa-update-toast');
+  if (toast) toast.classList.add('show');
 }
 
 // Handle Update Button click
