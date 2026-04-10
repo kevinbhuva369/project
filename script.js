@@ -603,12 +603,19 @@ document.addEventListener('DOMContentLoaded', () => {
   let deferredPrompt;
   const installLink = document.getElementById('installLink');
   const mobileInstallLink = document.getElementById('mobileInstallLink');
+  const heroInstallBtn = document.getElementById('heroInstallBtn');
+  const heroKnowledgeLink = document.getElementById('heroKnowledgeLink');
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
     if (installLink) installLink.style.display = 'block';
     if (mobileInstallLink) mobileInstallLink.style.display = 'flex';
+    if (heroInstallBtn) {
+      heroInstallBtn.style.display = 'inline-block';
+      // Hide knowledge link on mobile briefly to focus on download?
+      // Or just keep both.
+    }
   });
 
   const triggerInstall = async (e) => {
@@ -621,11 +628,13 @@ document.addEventListener('DOMContentLoaded', () => {
       deferredPrompt = null;
       if (installLink) installLink.style.display = 'none';
       if (mobileInstallLink) mobileInstallLink.style.display = 'none';
+      if (heroInstallBtn) heroInstallBtn.style.display = 'none';
     }
   };
 
   if (installLink) installLink.addEventListener('click', triggerInstall);
   if (mobileInstallLink) mobileInstallLink.addEventListener('click', triggerInstall);
+  if (heroInstallBtn) heroInstallBtn.addEventListener('click', triggerInstall);
 });
 
 /* ──────────────────────────────────────────────────────────────────────────
