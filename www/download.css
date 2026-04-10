@@ -192,6 +192,46 @@
   color: var(--text-muted);
 }
 
+.download-btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.download-btn-group .premium-download-btn {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 14px 10px;
+}
+
+.playstore-btn {
+  background: #34A853 !important; /* Google Play Green */
+  color: #fff !important;
+}
+
+.playstore-btn:hover {
+  background: #2d9248 !important;
+}
+
+.mirror-link {
+  color: var(--gold);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.mirror-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Simple Steps list */
 .simple-steps {
   list-style: none;
@@ -213,6 +253,48 @@
   color: var(--gold);
   margin-top: 3px;
   font-size: 0.8rem;
+}
+
+/* TROUBLESHOOTER SECTION */
+.troubleshooter-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.highlight-header i {
+  color: #ff9800 !important; /* Warning Orange */
+}
+
+.troubleshoot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.t-col h4 {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.t-col p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.t-col strong {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .troubleshoot-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* GUIDE PANEL */

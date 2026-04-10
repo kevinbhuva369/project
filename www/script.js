@@ -594,6 +594,15 @@ async function checkUpdateAPI() {
   try {
     const res = await fetch('version.json?t=' + Date.now());
     const data = await res.json();
+    
+    // 1. Update direct download link if on download page
+    const directApkBtn = document.getElementById('directApkBtn');
+    if (directApkBtn && data.directDownloadUrl) {
+      directApkBtn.href = data.directDownloadUrl;
+      console.log('✦ Dynamic Link: APK download URL updated');
+    }
+
+    // 2. Check for app version updates
     if (data.version !== APP_VERSION) {
       console.log('✦ Live Update: New version detected via API');
       showUpdateToast();
@@ -635,6 +644,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
+    console.log('✦ PWA: Install prompt available');
+    
     // High-priority Hub buttons
     if (androidInstallBtn) androidInstallBtn.style.display = 'inline-block';
     if (pcInstallBtn) pcInstallBtn.style.display = 'inline-block';
