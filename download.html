@@ -13,7 +13,10 @@
   <link rel="shortcut icon" href="images/app-icon.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="download-page">
+
+  <div class="glow-orb" style="top:-10%; left:20%;"></div>
+  <div class="glow-orb" style="bottom:10%; right:10%; background:rgba(212,160,23,0.1);"></div>
 
   <header>
     <nav class="nav-main">
@@ -24,62 +27,88 @@
         <li><a href="index.html">HOME</a></li>
         <li><a href="temples.html">TEMPLES</a></li>
         <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
-        <li><a href="index.html" class="active">DOWNLOAD</a></li>
+        <li><a href="download.html" class="active">DOWNLOAD</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="download-hero">
-      <span class="section-tag">Premium Experience</span>
-      <h1>GET THE SACRED APP</h1>
-      <p>Transform your pilgrimage with our official app. Fast, offline-capable, and designed for spiritual seekers. Available on PC, Android, and iOS.</p>
+      <div class="scroll-reveal">
+        <span class="section-tag">Premium Digital Experience</span>
+        <h1>UNFOLD THE DIVINE <br><span class="gold-text">ON EVERY DEVICE</span></h1>
+        <p>Seamlessly blending ancient wisdom with modern technology. Download our official app for a faster, offline-capable, and immersive spiritual journey.</p>
+      </div>
     </section>
 
-    <section class="download-grid">
+    <section class="download-hub-grid">
       
-      <!-- Android Card -->
-      <div class="download-card">
+      <!-- Native Android Card -->
+      <div class="download-glass-card scroll-reveal" data-delay="0.1s">
+        <div class="card-glow"></div>
         <i class="fa-brands fa-android platform-icon"></i>
-        <h2>Android</h2>
-        <ul class="download-steps">
-          <li>1. Open this page in **Chrome**.</li>
-          <li>2. Click the **Install** button below.</li>
-          <li>3. Confirm and it will appear on your Home Screen.</li>
-        </ul>
-        <a href="#" class="install-trigger-btn" id="androidInstallBtn"><i class="fa-solid fa-plus"></i> Install Now</a>
+        <h3>Native Android App</h3>
+        <p class="card-desc">The complete native experience. Optimized for performance and offline temple exploration.</p>
+        <div class="badge-row">
+            <span class="p-badge"><i class="fa-solid fa-circle-check"></i> Most Popular</span>
+            <span class="p-badge"><i class="fa-solid fa-bolt"></i> High Performance</span>
+        </div>
+        <a href="divine-journey.apk" class="premium-download-btn"><i class="fa-solid fa-file-arrow-down"></i> Download APK</a>
+        <span class="sub-hint">Latest Version: v1.0.4 • 42 MB</span>
       </div>
 
-      <!-- PC Card -->
-      <div class="download-card">
-        <i class="fa-solid fa-desktop platform-icon"></i>
-        <h2>PC / Windows</h2>
-        <ul class="download-steps">
-          <li>1. Open this page in **Chrome** or **Edge**.</li>
-          <li>2. Look for the **Install** icon in the URL bar.</li>
-          <li>3. Or click the button below to trigger setup.</li>
+      <!-- Web App (PWA) Card -->
+      <div class="download-glass-card scroll-reveal" data-delay="0.2s">
+        <div class="card-glow" style="background:rgba(255,255,255,0.05);"></div>
+        <i class="fa-solid fa-globe platform-icon"></i>
+        <h3>Progressive Web App</h3>
+        <p class="card-desc">No download required. Add instantly to your home screen from your browser.</p>
+        <ul class="simple-steps">
+          <li><i class="fa-solid fa-caret-right"></i> Open in **Chrome** or **Safari**</li>
+          <li><i class="fa-solid fa-caret-right"></i> Click the **Install** button below</li>
         </ul>
-        <a href="#" class="install-trigger-btn" id="pcInstallBtn"><i class="fa-solid fa-download"></i> Install to PC</a>
+        <a href="#" class="premium-download-btn ghost-btn" id="androidInstallBtn"><i class="fa-solid fa-plus"></i> Add to Home Screen</a>
+        <span class="sub-hint">Available on Android, iOS, & Desktop</span>
       </div>
 
-      <!-- iOS Card -->
-      <div class="download-card">
-        <i class="fa-brands fa-apple platform-icon"></i>
-        <h2>iOS (iPhone/iPad)</h2>
-        <ul class="download-steps">
-          <li>1. Open this page in **Safari**.</li>
-          <li>2. Tap the **Share** button <i class="fa-solid fa-share-from-square" style="color:var(--gold)"></i>.</li>
-          <li>3. Scroll down and tap **'Add to Home Screen'**.</li>
+      <!-- Desktop Card -->
+      <div class="download-glass-card scroll-reveal" data-delay="0.3s">
+        <div class="card-glow"></div>
+        <i class="fa-solid fa-laptop platform-icon"></i>
+        <h3>Desktop Version</h3>
+        <p class="card-desc">Experience India's heritage on the big screen with high-resolution temple deep-dives.</p>
+        <ul class="simple-steps">
+          <li><i class="fa-solid fa-caret-right"></i> Supported on **Windows & macOS**</li>
+          <li><i class="fa-solid fa-caret-right"></i> Use **Chrome** or **Edge** browser</li>
         </ul>
-        <span class="section-tag">Manual Install</span>
+        <a href="#" class="premium-download-btn" id="pcInstallBtn"><i class="fa-solid fa-desktop"></i> Setup for Desktop</a>
+        <span class="sub-hint">Standalone App Experience</span>
       </div>
 
     </section>
 
-    <section class="visit-section">
-      <h3>Already on the device you want?</h3>
-      <a href="index.html" class="main-btn main-btn-ghost"><i class="fa-solid fa-globe"></i> Visit Official Website</a>
+    <section class="guide-section">
+      <div class="guide-container glass-panel scroll-reveal">
+        <div class="guide-header">
+           <i class="fa-solid fa-circle-info"></i>
+           <h2>Can't find the install button?</h2>
+        </div>
+        <div class="guide-grid">
+           <div class="guide-col">
+              <h4>For iPhone / iOS</h4>
+              <p>1. Open this website in **Safari**.<br>2. Tap the **Share** button <i class="fa-solid fa-share-from-square"></i>.<br>3. Select **'Add to Home Screen'**.</p>
+           </div>
+           <div class="guide-col">
+              <h4>For Android</h4>
+              <p>1. Open in **Chrome**.<br>2. Tap the **three dots** ⋮ in corner.<br>3. Tap **'Install App'** or 'Add to Home Screen'.</p>
+           </div>
+        </div>
+      </div>
     </section>
+
+    <div class="visit-hub-wrap">
+       <a href="index.html" class="visit-link">← Return to Divine Journey Website</a>
+    </div>
 
   </main>
 
