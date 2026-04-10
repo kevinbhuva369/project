@@ -278,3 +278,30 @@
   .guide-grid { grid-template-columns: 1fr; }
   .download-glass-card { padding: 40px 25px; }
 }
+
+.build-guide-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 160, 23, 0.15);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 25px;
+  text-align: left;
+  width: 100%;
+}
+
+.build-guide-box h4 {
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.build-guide-box .simple-steps {
+  margin-bottom: 0;
+}
+
+.build-guide-box .simple-steps li {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
