@@ -2,5 +2,6 @@
   "version": "1.0.1",
   "build": 2,
   "releaseDate": "2026-04-10",
-  "notes": "Premium Download Hub Update: Added Google Play Store & Mirror options. Version synchronized across platform."
+  "notes": "Premium Download Hub Update: Added Google Play Store & Mirror options. Version synchronized across platform.",
+  "directDownloadUrl": "https://divinejourney.in/dist/divine-journey-latest.apk"
 }
