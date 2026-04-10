@@ -1,0 +1,18 @@
+{
+  "name": "Divine Journey",
+  "short_name": "Divine",
+  "description": "India's Sacred Temple Heritage",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#020C1B",
+  "theme_color": "#020C1B",
+  "icons": [
+    {
+      "src": "images/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait"
+}
