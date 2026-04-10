@@ -1,0 +1,120 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   DIVINE JOURNEY — download.css
+   Dedicated Download Hub Styles
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --obsidian: #020C1B;
+  --gold: #D4A017;
+  --gold-bright: #FFD700;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(212, 160, 23, 0.2);
+}
+
+.download-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(212, 160, 23, 0.05) 0%, transparent 70%);
+}
+
+.download-hero h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.download-hero p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Hub Grid */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.download-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.download-card i.platform-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 25px;
+}
+
+.download-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.download-steps {
+  text-align: left;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.download-steps li {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.install-trigger-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--gold);
+  color: var(--obsidian);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.install-trigger-btn:hover {
+  background: var(--gold-bright);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(212, 160, 23, 0.2);
+}
+
+/* Visit Website Section */
+.visit-section {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.visit-section h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .download-hero { padding-top: 100px; }
+  .download-grid { grid-template-columns: 1fr; }
+}

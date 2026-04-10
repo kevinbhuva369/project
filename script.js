@@ -606,6 +606,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroInstallBtn = document.getElementById('heroInstallBtn');
   const heroKnowledgeLink = document.getElementById('heroKnowledgeLink');
 
+  const androidInstallBtn = document.getElementById('androidInstallBtn');
+  const pcInstallBtn = document.getElementById('pcInstallBtn');
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
@@ -613,28 +616,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileInstallLink) mobileInstallLink.style.display = 'flex';
     if (heroInstallBtn) {
       heroInstallBtn.style.display = 'inline-block';
-      // Hide knowledge link on mobile briefly to focus on download?
-      // Or just keep both.
     }
+    // High-priority Hub buttons
+    if (androidInstallBtn) androidInstallBtn.style.display = 'inline-block';
+    if (pcInstallBtn) pcInstallBtn.style.display = 'inline-block';
   });
 
   const triggerInstall = async (e) => {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) {
+      // If no prompt, maybe show a hint or just let the default link work
+      console.log('✦ One-click install not triggered yet');
+      return;
+    }
     e.preventDefault();
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     console.log(`✦ Install Choice: ${outcome}`);
     if (outcome === 'accepted') {
       deferredPrompt = null;
-      if (installLink) installLink.style.display = 'none';
-      if (mobileInstallLink) mobileInstallLink.style.display = 'none';
       if (heroInstallBtn) heroInstallBtn.style.display = 'none';
+      if (androidInstallBtn) androidInstallBtn.style.display = 'none';
+      if (pcInstallBtn) pcInstallBtn.style.display = 'none';
     }
   };
 
   if (installLink) installLink.addEventListener('click', triggerInstall);
   if (mobileInstallLink) mobileInstallLink.addEventListener('click', triggerInstall);
   if (heroInstallBtn) heroInstallBtn.addEventListener('click', triggerInstall);
+  if (androidInstallBtn) androidInstallBtn.addEventListener('click', triggerInstall);
+  if (pcInstallBtn) pcInstallBtn.addEventListener('click', triggerInstall);
 
   // Detect if running as PWA (standalone)
   if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
