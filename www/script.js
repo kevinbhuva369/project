@@ -608,23 +608,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const androidInstallBtn = document.getElementById('androidInstallBtn');
   const pcInstallBtn = document.getElementById('pcInstallBtn');
+  const footerInstallBtn = document.getElementById('footerInstallBtn');
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    if (installLink) installLink.style.display = 'block';
-    if (mobileInstallLink) mobileInstallLink.style.display = 'flex';
-    if (heroInstallBtn) {
-      heroInstallBtn.style.display = 'inline-block';
-    }
     // High-priority Hub buttons
     if (androidInstallBtn) androidInstallBtn.style.display = 'inline-block';
     if (pcInstallBtn) pcInstallBtn.style.display = 'inline-block';
+    if (footerInstallBtn) footerInstallBtn.style.display = 'flex';
+    
+    if (heroInstallBtn) {
+      heroInstallBtn.style.display = 'inline-block';
+    }
   });
 
   const triggerInstall = async (e) => {
     if (!deferredPrompt) {
-      // If no prompt, maybe show a hint or just let the default link work
       console.log('✦ One-click install not triggered yet');
       return;
     }
@@ -637,14 +637,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroInstallBtn) heroInstallBtn.style.display = 'none';
       if (androidInstallBtn) androidInstallBtn.style.display = 'none';
       if (pcInstallBtn) pcInstallBtn.style.display = 'none';
+      if (footerInstallBtn) footerInstallBtn.style.display = 'none';
     }
   };
 
-  if (installLink) installLink.addEventListener('click', triggerInstall);
-  if (mobileInstallLink) mobileInstallLink.addEventListener('click', triggerInstall);
   if (heroInstallBtn) heroInstallBtn.addEventListener('click', triggerInstall);
   if (androidInstallBtn) androidInstallBtn.addEventListener('click', triggerInstall);
   if (pcInstallBtn) pcInstallBtn.addEventListener('click', triggerInstall);
+  if (footerInstallBtn) footerInstallBtn.addEventListener('click', triggerInstall);
 
   // Detect if running as PWA (standalone)
   if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
