@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
-  "build": 1,
+  "version": "1.0.1",
+  "build": 2,
   "releaseDate": "2026-04-10",
-  "notes": "Premium Download Hub Update & Live Update API Integration"
+  "notes": "Premium Download Hub Update: Added Google Play Store & Mirror options. Version synchronized across platform."
 }

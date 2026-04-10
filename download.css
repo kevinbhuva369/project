@@ -192,6 +192,46 @@
   color: var(--text-muted);
 }
 
+.download-btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.download-btn-group .premium-download-btn {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 14px 10px;
+}
+
+.playstore-btn {
+  background: #34A853 !important; /* Google Play Green */
+  color: #fff !important;
+}
+
+.playstore-btn:hover {
+  background: #2d9248 !important;
+}
+
+.mirror-link {
+  color: var(--gold);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.mirror-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Simple Steps list */
 .simple-steps {
   list-style: none;
