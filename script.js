@@ -554,6 +554,52 @@ const pathPrefix = isViewPage ? '../' : '';
   });
 })();
 
+
+/* ──────────────────────────────────────────────────────────────────────────
+   16. PWA SERVICE WORKER & UPDATE LOGIC
+   ────────────────────────────────────────────────────────────────────────── */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('✦ SW Registered');
+
+      // Check for updates
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // New version available!
+            const toast = document.getElementById('pwa-update-toast');
+            if (toast) toast.classList.add('show');
+          }
+        });
+      });
+    }).catch(err => console.error('SW Registration Failed', err));
+  });
+
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!refreshing) {
+      window.location.reload();
+      refreshing = true;
+    }
+  });
+}
+
+// Handle Update Button click
+document.addEventListener('DOMContentLoaded', () => {
+  const refreshBtn = document.getElementById('pwa-refresh-btn');
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', () => {
+      navigator.serviceWorker.getRegistration().then(reg => {
+        if (reg && reg.waiting) {
+          reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        }
+      });
+    });
+  }
+});
+
 /* ──────────────────────────────────────────────────────────────────────────
    INIT COMPLETE
    ────────────────────────────────────────────────────────────────────────── */
