@@ -1,0 +1,80 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   DIVINE JOURNEY — temple.css  (temples.html gallery page)
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* override body top margin for temples.html which uses <main> */
+main { margin-top: var(--nav-h); }
+
+/* ─── CAT SECTION (template overrides loaded inline for colors, kept here) ── */
+.cat-section { padding: 60px 24px 20px; }
+
+.cat-header {
+  max-width: var(--max-w);
+  margin: 0 auto 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid rgba(212,160,23,0.3);
+}
+
+.cat-icon { font-size: 2rem; flex-shrink: 0; }
+
+.cat-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.cat-name {
+  font-family: var(--font-heading);
+  color: var(--deep-maroon);
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.cat-count {
+  margin-left: auto;
+  background: var(--gold-vibrant);
+  color: var(--maroon-deeper);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(255,215,0,0.3);
+}
+
+/* Dark section */
+.cat-section-dark {
+  background: linear-gradient(160deg, var(--maroon-deeper) 0%, #0d1f3c 60%, var(--deep-maroon) 100%);
+}
+.cat-section-cream { background: var(--cream); }
+
+/* The divine-intro block that was placed inside the nav overlay on temples.html */
+.divine-intro {
+  text-align: center;
+  padding: 60px 24px 44px;
+}
+.divine-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(212,160,23,0.3);
+  background: rgba(212,160,23,0.07);
+  padding: 5px 16px;
+  border-radius: 24px;
+  margin-bottom: 14px;
+}

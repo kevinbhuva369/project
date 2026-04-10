@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Journey | All About Hindu Temples</title>
+  <meta name="description" content="Learn everything about Hindu temples — architecture, history, sacred rituals, science, pilgrimage guide and spiritual significance. The most complete temple education resource.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="learnmore.css">
+  <link rel="shortcut icon" href="colorful-arabesque-mandala-pattern-background_492473-352.avif" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav-main">
+    <a href="index.html" class="nav-icon">
+      <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey Logo" id="icon">
+      <span class="logo-text">DIVINE JOURNEY</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links-desktop">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li>
+          <a href="temples.html">TEMPLES <i class="fa-solid fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="temples.html#char-dham">Char Dham</a></li>
+            <li><a href="temples.html#shakti-peethas">Shakti Peethas</a></li>
+            <li><a href="temples.html#north-india">North India</a></li>
+            <li><a href="temples.html#south-india">South India</a></li>
+            <li><a href="temples.html#east-india">East India</a></li>
+            <li><a href="temples.html#west-india">West India</a></li>
+            <li><a href="temples.html#modern-temples">Modern Temples</a></li>
+            <li><a href="temples.html#krishna-temples">Krishna Temples</a></li>
+          </ul>
+        </li>
+        <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
+                <li class="nav-search-container">
+          <button id="searchBtn" class="premium-nav-search" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-text-nav">Search</span></button>
+        </li>
+      </ul>
+  </nav>
+</header>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-overlay-content">
+    <a href="index.html" class="overlay-link">HOME</a>
+    <a href="about.html" class="overlay-link">ABOUT</a>
+    <a href="temples.html" class="overlay-link">TEMPLES</a>
+    <a href="jyotirlinga.html" class="overlay-link">JYOTIRLINGAS</a>
+    <a href="learnmore.html" class="overlay-link active">KNOWLEDGE</a>
+  </div>
+  <div class="nav-overlay-footer">
+    <p><i class="fa-solid fa-om gold-icon"></i> Divine Journey — India's Sacred Heritage</p>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item">
+    <i class="fa-solid fa-house gold-icon"></i>
+    <span>Home</span>
+  </a>
+  <a href="temples.html" class="bottom-nav-item">
+    <i class="fa-solid fa-vihara gold-icon"></i>
+    <span>Temples</span>
+  </a>
+  <a href="jyotirlinga.html" class="bottom-nav-item">
+    <i class="fa-solid fa-gopuram gold-icon"></i>
+    <span>Jyotir</span>
+  </a>
+  <a href="#" class="bottom-nav-item active" id="mobileSearchTrigger">
+    <i class="fa-solid fa-magnifying-glass gold-icon"></i>
+    <span>Search</span>
+  </a>
+</nav>
+
+<div id="search-results-overlay" class="search-results-overlay" style="display:none;"></div>
+
+<main>
+
+  <section class="learnmore-hero">
+    <div class="learnmore-hero-content">
+      <span class="hero-tag">Sacred Knowledge Centre</span>
+      <h1><i class="fa-solid fa-om gold-icon" style="font-size: 0.7em; vertical-align: middle; margin-right: 10px;"></i>The Divine World of<br><span>Hindu Temples</span></h1>
+      <p>A comprehensive deep-dive into the spiritual heart, ancient science, living rituals, and architectural genius of India's most sacred spaces — told simply, beautifully, and completely.</p>
+      <div class="hero-scroll-chips">
+        <a href="#what-is-temple" class="hero-chip"><i class="fa-solid fa-vihara gold-icon"></i> What is a Temple?</a>
+        <a href="#architecture" class="hero-chip"><i class="fa-solid fa-archway gold-icon"></i> Architecture</a>
+        <a href="#rituals" class="hero-chip"><i class="fa-solid fa-hands-praying gold-icon"></i> Rituals</a>
+        <a href="#science" class="hero-chip"><i class="fa-solid fa-microscope gold-icon"></i> Sacred Science</a>
+        <a href="#pilgrimage" class="hero-chip"><i class="fa-solid fa-person-hiking gold-icon"></i> Pilgrimage Guide</a>
+        <a href="#jyotirlinga" class="hero-chip"><i class="fa-solid fa-gopuram gold-icon"></i> Jyotirlingas</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="toc-strip" aria-label="Page Sections">
+    <div class="toc-inner">
+      <a href="#what-is-temple" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-vihara gold-icon"></i></span> Temple Basics</a>
+      <a href="#architecture" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-archway gold-icon"></i></span> Architecture</a>
+      <a href="#rituals" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-hands-praying gold-icon"></i></span> Rituals</a>
+      <a href="#science" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-microscope gold-icon"></i></span> Sacred Science</a>
+      <a href="#styles" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-gopuram gold-icon"></i></span> Temple Styles</a>
+      <a href="#pilgrimage" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-person-hiking gold-icon"></i></span> Pilgrimage</a>
+      <a href="#jyotirlinga" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-dharmachakra gold-icon"></i></span> Jyotirlingas</a>
+      <a href="#facts" class="toc-item"><span class="toc-icon"><i class="fa-solid fa-wand-magic-sparkles gold-icon"></i></span> Sacred Facts</a>
+    </div>
+  </nav>
+
+  <section class="lm-section lm-cream" id="what-is-temple">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Foundation</span>
+        <h2><i class="fa-solid fa-vihara gold-icon"></i> What is a Hindu Temple?</h2>
+        <p>Understanding the concept of a Mandir goes far beyond religion — it is architecture, philosophy, science, and art in perfect unity.</p>
+      </div>
+      <div class="lm-intro-grid scroll-reveal">
+        <img src="images/learnmore_temple.png" alt="Majestic Hindu Temple" class="lm-intro-img">
+        <div class="lm-intro-text">
+          <p>A Hindu temple is far more than a building. Known as <strong>Mandir, Devasthana,</strong> or <strong>Devalaya</strong> (the abode of God), it is a <strong>living cosmological symbol</strong> — a physical model of the entire universe constructed according to precise sacred mathematical formulas documented in the ancient Vastushastra and Agama Shastras.</p>
+          <p>When a devotee enters a temple, they symbolically re-enter the cosmos itself — progressing from the outer world (ordinary consciousness) through successive enclosures into the innermost sanctum (Garbhagriha — literally "womb-chamber") where the divine resides in pure, concentrated form.</p>
+          <p>Historically, temples were not only sacred spaces. They functioned as <strong>centres of education, art, music, dance, economy, governance, and community life</strong> — the complete beating heart of Indian civilization for 2,000+ years.</p>
+          <div class="lm-stat-row">
+            <div class="lm-stat"><span class="lm-stat-num"><span class="stat-number" data-target="5000" data-suffix="+">0</span>+</span><span class="lm-stat-label">Years of Tradition</span></div>
+            <div class="lm-stat"><span class="lm-stat-num"><span class="stat-number" data-target="5" data-suffix=" Lakh+">0</span> Lakh+</span><span class="lm-stat-label">Temples in India</span></div>
+            <div class="lm-stat"><span class="lm-stat-num"><span class="stat-number" data-target="108">0</span></span><span class="lm-stat-label">Divya Desams</span></div>
+            <div class="lm-stat"><span class="lm-stat-num"><span class="stat-number" data-target="51">0</span></span><span class="lm-stat-label">Shakti Peethas</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lm-pull-quote">
+        <blockquote>"The Mandir is not a house we build for God. It is a doorway God leaves open for us — so that we may find our way back to the silence within ourselves that has always been divine."</blockquote>
+        <cite>— Adi Shankaracharya, Bhaja Govindam</cite>
+      </div>
+
+      <div class="lm-card-grid cols-3">
+        <div class="lm-card scroll-reveal" data-delay="0.1s">
+          <span class="lm-card-icon"><i class="fa-solid fa-om gold-icon"></i></span>
+          <h3>Cosmic Map in Stone</h3>
+          <p>The temple's floor plan is a mandala — a diagram of the entire cosmos. The central Garbhagriha represents the cosmic womb where creation begins. Moving outward, each successive hall represents a lower dimension of consciousness — the physical journey through the temple is a spiritual journey inward.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.2s">
+          <span class="lm-card-icon"><i class="fa-solid fa-scale-balanced gold-icon"></i></span>
+          <h3>Vastu Shastra</h3>
+          <p>Every temple is precisely oriented — usually facing east to receive the sun's first rays on the divine idol. The mathematical ratios of width, height, and depth are prescribed down to finger-widths in the Vastu Shastra. This creates structures that exist in perfect mathematical harmony with natural forces.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.3s">
+          <span class="lm-card-icon"><i class="fa-solid fa-users gold-icon"></i></span>
+          <h3>Community Centre</h3>
+          <p>Ancient temples ran schools (Gurukuls), hospitals, granaries, musical conservatories, dance academies, and courts of justice within their precincts. Temples collected taxes, managed irrigation systems, and were the economic engines of their communities — a complete civilization in miniature.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-white" id="architecture">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Sacred Design</span>
+        <h2><i class="fa-solid fa-vihara"></i> The Architecture of the Divine</h2>
+        <p>Every element of temple architecture encodes a precise spiritual and scientific meaning. Nothing is decorative — everything is intentional.</p>
+      </div>
+      <div class="lm-card-grid">
+        <div class="lm-card scroll-reveal" data-delay="0.1s">
+          <span class="lm-card-icon">🗼</span>
+          <h3>Shikhara / Gopuram (Tower)</h3>
+          <p>The temple tower represents Mount Meru — the cosmic mountain at the centre of the universe in Hindu cosmology. Its upward thrust toward the sky represents the human aspiration toward the divine. In the North Indian style, the Shikhara curves inward (Nagara). In the South, the Gopuram rises as a stepped pyramid (Dravidian).</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.2s">
+          <span class="lm-card-icon">🚪</span>
+          <h3>Gopuram Gateway</h3>
+          <p>The ornate gateway towers of South Indian temples are covered in thousands of painted sculptures of gods, demons, saints, and cosmic scenes — representing the entire range of existence that the devotee must traverse before reaching the divine centre. Entering the temple through a Gopuram is a symbolic birth into the sacred world.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.3s">
+          <span class="lm-card-icon">🕳️</span>
+          <h3>Garbhagriha (Inner Sanctum)</h3>
+          <p>The smallest, darkest room in the temple — the inner sanctuary — is the most sacred. The deliberate dimness and lack of decoration focuses the mind completely on the divine idol within. The term "Garbhagriha" (womb-chamber) indicates this is the source from which the divine energy of the entire temple radiates outward.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-vihara"></i></span>
+          <h3>Mandapa (Hall)</h3>
+          <p>The columned halls (Mandapas) that precede the inner sanctum are spaces for congregation, music, dance, and discourse. The Natamandira (dance hall) was where classical dance — itself a sacred offering — was performed before the deity. The carved pillars of ancient Mandapas are encyclopedias of mythology, ethics, and divine beauty.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-water"></i></span>
+          <h3>Temple Tank (Pushkarini)</h3>
+          <p>The sacred water tank adjacent to virtually every South Indian temple serves for ritual purification before entering the temple. The tank's waters are consecrated with mantras and the collected blessings of centuries of worship. Bathing here is considered equivalent to bathing in all sacred rivers simultaneously.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon">🔔</span>
+          <h3>The Temple Bell (Ghanta)</h3>
+          <p>The large bronze or brass bell hung at the temple entrance is struck by devotees as they enter. Scientifically, the specific alloy and shape produces a sound that resonates at 7 seconds — proven to simultaneously activate both hemispheres of the brain and induce a meditative theta-wave state. This is not coincidence — it is ancient neuro-acoustic engineering.</p>
+        </div>
+      </div>
+      <div class="lm-highlight-box">
+        <h3><i class="fa-solid fa-microscope gold-icon"></i> The Sacred Science of the Kalasha</h3>
+        <p>The Kalasha — the pot-shaped finial at the very top of the Shikhara — is not merely decorative. It is made of a specific copper-brass alloy carefully described in the Agama Shastra, and contains consecrated water, specific herbs, and inscribed copper plates. Modern electromagnetic studies have found that the Kalasha acts as a resonant antenna for specific frequencies, concentrating and amplifying the devotional energy generated within the temple complex.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-warm" id="rituals">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Living Tradition</span>
+        <h2><i class="fa-solid fa-hands-praying gold-icon"></i> Sacred Rituals — The Daily Divine Schedule</h2>
+        <p>Hindu temple worship follows a precise daily timetable called the Puja schedule — treating the deity as a living royal being who wakes, eats, rests, and sleeps.</p>
+      </div>
+      <div class="lm-card-grid cols-4">
+        <div class="lm-card scroll-reveal" data-delay="0.1s">
+          <span class="lm-card-icon"><i class="fa-solid fa-sun gold-icon"></i></span>
+          <h3>Mangala Aarti (Dawn)</h3>
+          <p>The first puja of the day — conducted before sunrise — wakens the deity. The inner sanctum is opened, lamps lit, and gentle wake-up songs sung. Only the most devoted pilgrims attend this early puja, which carries the freshest, most powerful spiritual charge of the day.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.2s">
+          <span class="lm-card-icon"><i class="fa-solid fa-bath gold-icon"></i></span>
+          <h3>Abhishekam (Sacred Bath)</h3>
+          <p>The sacred bathing of the deity with Panchamrut (five nectars — milk, curd, honey, ghee, and sugar) followed by water is the most intimate ritual act in temple worship. The five substances correspond to the five elements and five senses — the offering represents the complete surrender of one's sensory existence.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.3s">
+          <span class="lm-card-icon"><i class="fa-solid fa-crown gold-icon"></i></span>
+          <h3>Shringar (Adornment)</h3>
+          <p>The deity is dressed in fresh silk garments, adorned with gold and gemstone jewellery, garlanded with specific flowers prescribed for each deity, anointed with sandalwood paste, and presented as a complete divine being in royal splendour for the day's darshan.</p>
+        </div>
+        <div class="lm-card scroll-reveal" data-delay="0.4s">
+          <span class="lm-card-icon"><i class="fa-solid fa-bowl-food gold-icon"></i></span>
+          <h3>Bhog / Naivedya (Food Offering)</h3>
+          <p>Up to 56 varieties of food (Chappan Bhog) are offered to the deity at the midday meal — cooked in the temple kitchen using sacred recipes, offered with specific mantras, and then distributed as Prasad to waiting devotees. The food is believed to carry the divine's direct blessing after the offering.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-fire-flame-curved gold-icon"></i></span>
+          <h3>Aarti (Light Offering)</h3>
+          <p>The Aarti ceremony — waving a multi-flame lamp in a specific clockwise circular motion before the deity — is accompanied by bell-ringing, conch-blowing, and devotional singing. The circling lamp symbolises offering the entire solar system to the divine. The combined sound is scientifically shown to create a measurable energy shift in the space.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-person-walking gold-icon"></i></span>
+          <h3>Pradakshina (Circumambulation)</h3>
+          <p>Walking clockwise around the sanctum keeps the divine always on your right — the side of reverence in Indian tradition. Each circumambulation is a meditation in motion. The number of circles prescribed (3, 7, 11, 21, or 108 depending on the deity and occasion) each carry specific symbolic significance.</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-spa gold-icon"></i></span>
+          <h3>Pushpa Puja (Flower Offering)</h3>
+          <p>Each flower offered has specific significance: Lotus for Lakshmi and Vishnu (purity from mud), Bilva leaves for Shiva (the three leaflets represent the three Gunas surrendered), Marigold for Durga (the brilliant orange represents the fire of devotion), Jasmine for Krishna (fragrance representing divine love spreading in all directions).</p>
+        </div>
+        <div class="lm-card">
+          <span class="lm-card-icon"><i class="fa-solid fa-moon gold-icon"></i></span>
+          <h3>Shayana Seva (Night Rest)</h3>
+          <p>The final puja of the day lovingly prepares the deity for sleep — the inner sanctum is dimmed, a final lamp waved, lullaby-like devotional songs sung, and the deity's curtain gently drawn closed. This tender anthropomorphic relationship between devotee and divine is the living heart of the Bhakti tradition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-dark" id="science">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Ancient Wisdom</span>
+        <h2><i class="fa-solid fa-microscope gold-icon"></i> The Science Hidden in Sacred Tradition</h2>
+        <p>Modern science is only beginning to validate what ancient temple builders encoded in stone, sound, and ritual thousands of years ago.</p>
+      </div>
+      <div class="lm-card-grid cols-3">
+        <div class="lm-card lm-card-dark scroll-reveal" data-delay="0.1s">
+          <span class="lm-card-icon"><i class="fa-solid fa-bell gold-icon"></i></span>
+          <h3>7-Second Bell Resonance</h3>
+          <p>Ancient temple bells are made from an alloy of 5 metals (bell metal) in precise proportions. When struck, they resonate for exactly 7 seconds — the duration scientifically proven to simultaneously activate both brain hemispheres and induce a theta-wave state (the state of meditation and deep learning). This was engineered, not accidental.</p>
+        </div>
+        <div class="lm-card lm-card-dark scroll-reveal" data-delay="0.2s">
+          <span class="lm-card-icon"><i class="fa-solid fa-om gold-icon"></i></span>
+          <h3>OM = Earth's Frequency</h3>
+          <p>The chanting of OM (432 Hz) matches the measurable electromagnetic frequency of Earth's Schumann Resonance (7.83 Hz × harmonics). Modern neuroscience confirms that certain chanting frequencies demonstrably reduce cortisol (stress hormone) by up to 65% and increase dopamine and oxytocin. The effect is physiological, not merely psychological.</p>
+        </div>
+        <div class="lm-card lm-card-dark">
+          <span class="lm-card-icon"><i class="fa-solid fa-magnet gold-icon"></i></span>
+          <h3>Copper Underground Yantra</h3>
+          <p>Every temple sanctum has a copper Yantra (sacred geometric diagram) buried beneath it at consecration. Copper is one of the best conductors of electromagnetic energy. This Yantra acts as a resonant focal plate that concentrates and stabilises the specific energy field generated by the combination of mantras, rituals, and devotional energy over centuries.</p>
+        </div>
+        <div class="lm-card lm-card-dark">
+          <span class="lm-card-icon"><i class="fa-solid fa-leaf gold-icon"></i></span>
+          <h3>Sacred Plants as Medicine</h3>
+          <p>Tulasi (Basil) — Vishnu's sacred plant — is a proven adaptogen that reduces anxiety and inflammation. Bilva (Bael) — Shiva's sacred leaf — contains compounds with powerful antibacterial and antidiabetic properties. Neem (used in Vishnu temple offerings) is one of the most potent natural antibiotics known. These prescriptions were both sacred and medical.</p>
+        </div>
+        <div class="lm-card lm-card-dark">
+          <span class="lm-card-icon"><i class="fa-solid fa-ruler-combined gold-icon"></i></span>
+          <h3>Shadow-Free Architecture</h3>
+          <p>The 216-foot Brihadeeswara Temple tower casts no shadow at noon due to precise astronomical alignment built into its taper angle and orientation. The Shore Temple at Mahabalipuram was aligned to the winter solstice sunrise so the first rays fall directly on the Shivlinga. These were not guesses — they were the product of advanced astronomical mathematics.</p>
+        </div>
+        <div class="lm-card lm-card-dark">
+          <span class="lm-card-icon"><i class="fa-solid fa-calculator gold-icon"></i></span>
+          <h3>108 — A Cosmic Code</h3>
+          <p>The number 108 is encoded throughout Hinduism — 108 Upanishads, 108 beads in a mala, 108 divine names. Astronomically: the distance from Earth to Sun = 108 × Sun's diameter; Earth to Moon = 108 × Moon's diameter. The number 108 connects earth, moon, sun, and the sacred in a single mathematical constant — making it literally a cosmic code.</p>
+        </div>
+      </div>
+      <div class="lm-pull-quote">
+        <blockquote>"Our ancestors did not simply believe in the sacred — they measured it, mapped it, and built it in stone. What we call 'ancient superstition' is increasingly proving to be 'ancient precision' as modern instruments finally catch up."</blockquote>
+        <cite>— Dr. V. Ganapati Sthapati, Master Temple Architect</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-cream" id="styles">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Regional Heritage</span>
+        <h2><i class="fa-solid fa-gopuram gold-icon"></i> The Six Grand Styles of Temple Architecture</h2>
+        <p>India's astonishing regional diversity produced at least six distinct temple architectural traditions — each a complete aesthetic universe in itself.</p>
+      </div>
+      <div class="lm-arch-types">
+        <div class="lm-arch-type scroll-reveal" data-delay="0.1s">
+          <span class="arch-emoji"><i class="fa-solid fa-mountain gold-icon"></i></span>
+          <h3>Nagara (North India)</h3>
+          <p>Curvilinear Shikhara resembling mountain peaks. Examples: Khajuraho, Lingaraja, Kedarnath, Somnath.</p>
+        </div>
+        <div class="lm-arch-type scroll-reveal" data-delay="0.2s">
+          <span class="arch-emoji"><i class="fa-solid fa-gopuram gold-icon"></i></span>
+          <h3>Dravidian (South India)</h3>
+          <p>Tall pyramidal Gopurams covered in colourful sculptures. Examples: Meenakshi, Srirangam, Brihadeeswara.</p>
+        </div>
+        <div class="lm-arch-type scroll-reveal" data-delay="0.3s">
+          <span class="arch-emoji"><i class="fa-solid fa-globe gold-icon"></i></span>
+          <h3>Vesara (Deccan)</h3>
+          <p>Hybrid style blending North and South elements. Examples: Belur, Halebid, Pattadakal (Chalukya-Hoysala).</p>
+        </div>
+        <div class="lm-arch-type scroll-reveal" data-delay="0.4s">
+          <span class="arch-emoji"><i class="fa-solid fa-umbrella gold-icon"></i></span>
+          <h3>Kerala Style</h3>
+          <p>Sloped copper roofs adapted for heavy monsoon. Examples: Guruvayur, Padmanabhaswamy, Aranmula.</p>
+        </div>
+        <div class="lm-arch-type scroll-reveal" data-delay="0.5s">
+          <span class="arch-emoji"><i class="fa-solid fa-hammer gold-icon"></i></span>
+          <h3>Rock-Cut Temples</h3>
+          <p>Entire temples carved from single living rock. Examples: Ellora Kailasa, Shore Temple, Elephanta Caves.</p>
+        </div>
+        <div class="lm-arch-type scroll-reveal" data-delay="0.6s">
+          <span class="arch-emoji"><i class="fa-solid fa-wand-magic-sparkles gold-icon"></i></span>
+          <h3>Modern Marble Style</h3>
+          <p>Contemporary with Italian marble, traditional form. Examples: Akshardham Delhi, Prem Mandir, Birla Mandirs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-white" id="pilgrimage">
+    <div class="lm-container">
+      <div class="lm-section-header scroll-reveal">
+        <span class="lm-section-tag">Complete Guide</span>
+        <h2><i class="fa-solid fa-person-hiking gold-icon"></i> The Sacred Pilgrimage — Step by Step</h2>
+        <p>Tirtha Yatra (pilgrimage) is not merely travel — it is a complete inner journey. Here is how to do it with full understanding and maximum spiritual benefit.</p>
+      </div>
+      <div class="lm-steps">
+        <div class="lm-step scroll-reveal" data-delay="0.1s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">01</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-om"></i></div>
+          </div>
+          <h3>Sankalpa — The Sacred Resolve</h3>
+          <p>Before departure, make a formal mental declaration (Sankalpa) of your pilgrimage purpose — whether healing, gratitude, guidance, or liberation. A clearly held intention amplifies every experience that follows.</p>
+        </div>
+        <div class="lm-step scroll-reveal" data-delay="0.2s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">02</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-leaf"></i></div>
+          </div>
+          <h3>Purification — Body and Mind</h3>
+          <p>Observe at least three days of vegetarian eating, early rising, reduced speech, and if possible a partial fast. This is not punishment — it is tuning the instrument of body and mind to the higher frequencies of the sacred site.</p>
+        </div>
+        <div class="lm-step scroll-reveal" data-delay="0.3s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">03</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-water"></i></div>
+          </div>
+          <h3>Sacred Snan — The Ritual Bath</h3>
+          <p>At every sacred river, tank, or kund on the route — take a physical bath with mantras. Water is the great purifier physically and subtly. Sacred bodies of water near major temples have measurably different mineral and energetic composition.</p>
+        </div>
+        <div class="lm-step scroll-reveal" data-delay="0.4s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">04</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-eye"></i></div>
+          </div>
+          <h3>Darshan — The Sacred Exchange</h3>
+          <p>Stand before the deity with eyes open, inner chatter silenced, and full presence offered. Darshan is an exchange — the devotee sees the divine, and the divine sees the devotee. This is the precise moment the entire pilgrimage builds toward.</p>
+        </div>
+        <div class="lm-step scroll-reveal" data-delay="0.5s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">05</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-rotate"></i></div>
+          </div>
+          <h3>Pradakshina — Circumambulation</h3>
+          <p>Walk clockwise around the sanctum — 3, 7, 11, or 21 times. Keep the divine always on your right. Each circle integrates the experience more deeply and builds the accumulated sacred energy of the visit.</p>
+        </div>
+        <div class="lm-step scroll-reveal" data-delay="0.6s">
+          <div class="lm-step-header">
+            <div class="lm-step-num">06</div>
+            <div class="lm-step-icon"><i class="fa-solid fa-bowl-food"></i></div>
+          </div>
+          <h3>Prasad — The Divine Gift</h3>
+          <p>Receive the sacred Prasad (food blessed by offering) and consume it there or shortly after. Prasad is the divine energy in physical form, transferred through the ritual of offering and returned through the ritual of sharing.</p>
+        </div>
+      </div>
+
+
+      <div class="lm-highlight-box" style="margin-top:40px;">
+        <h3><i class="fa-solid fa-map gold-icon"></i> The Four Most Sacred Pilgrimage Circuits</h3>
+        <p><strong>Char Dham:</strong> Badrinath (Vishnu) · Dwarka (Krishna) · Puri Jagannath · Rameshwaram (Shiva) — one pilgrimage visiting all four cardinal sacred sites of India. &nbsp;|&nbsp; <strong>12 Jyotirlingas:</strong> Shiva's self-manifested light in 12 sacred sites across India — from Somnath in the west to Ramanathaswamy in the south. &nbsp;|&nbsp; <strong>51 Shakti Peethas:</strong> Goddess Sati's body parts falling in 51 locations across the subcontinent — each a supreme Devi shrine. &nbsp;|&nbsp; <strong>108 Divya Desams:</strong> The 108 sacred Vishnu shrines praised by the Alvar saints in 4,000 holy verses of the Divya Prabandham.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section section-light-gradient" id="jyotirlinga">
+    <div class="lm-container">
+      <div class="lm-section-header" style="text-align: center; margin-bottom: 60px;">
+        <span class="lm-section-tag" style="background: rgba(255,255,255,0.1); color: var(--gold-light); border-color: rgba(255,255,255,0.2);">Supreme Shiva Shrines</span>
+        <h2 style="color: white;"><i class="fa-solid fa-gopuram gold-icon"></i> The 12 Jyotirlingas — Light of Shiva</h2>
+        <p style="color: var(--text-on-dark-muted); margin: 0 auto;">The Jyotirlingas are 12 sacred sites where Lord Shiva manifested as an infinite column of light — each one a direct physical manifestation of divine consciousness.</p>
+      </div>
+      
+      <div class="ab-stats-premium">
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="1">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Somnath</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Gujarat — First Jyotirlinga, Lord of the Moon. Rebuilt 17 times after destruction. The eternal survivor.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="2">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Mallikarjuna</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Srisailam, Andhra — Jyotirlinga + Shakti Peetha. Shiva and Parvati together on Nallamala hills.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="3">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Mahakaleshwar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Ujjain, MP — Shiva as Master of Time. The only south-facing Jyotirlinga. Bhasma Aarti at dawn.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="4">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Omkareshwar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">MP — Island shaped like OM. Two lingas: Omkareshwar and Mamleshwar count as one Jyotirlinga.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="5">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Kedarnath</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Uttarakhand — Himalayan Jyotirlinga at 3,583m. Accessible only 6 months/year. Pancha Kedar.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="6">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Bhimashankar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Maharashtra — In Sahyadri forests, source of Bhima River. Home of the Giant Indian Squirrel.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="7">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Kashi Vishwanath</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Varanasi, UP — The golden temple on the banks of Ganga. The spiritual capital of India.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="8">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Trimbakeshwar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Nashik — Source of Godavari River. Unique 3-in-1 linga (Trimurti). Kumbh Mela site.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="9">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Baidyanath</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Jharkhand — Shiva as Divine Physician. Shravan Mela draws millions of Kanwariyas annually.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="10">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Nageshwar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Dwarka, Gujarat — Lord of all Nagas (Serpents). 25-metre Shiva statue visible from afar.</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="11">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Ramanathaswamy</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Rameswaram — Southernmost Jyotirlinga. Char Dham. 22 sacred theerthas (wells).</p>
+        </div>
+
+        <div class="premium-glass-card">
+          <div class="glow-point"></div>
+          <span class="lm-card-icon" style="color: var(--gold-vibrant); font-family: 'Cinzel Decorative'; font-size: 2.5rem;"><span class="stat-number" data-target="12">0</span></span>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 12px;">Grishneshwar</h3>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.9rem;">Aurangabad — 12th Jyotirlinga. Near Ellora UNESCO site. Built by Ahilyabai Holkar.</p>
+        </div>
+
+        <div class="premium-glass-card" style="background: rgba(255,255,255,0.1); border-style: dashed; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+          <i class="fa-solid fa-arrow-right gold-icon" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+          <h3 style="color: white; font-family: 'Cinzel Decorative'; margin-bottom: 10px;">Deep Dive</h3>
+          <a href="jyotirlinga.html" style="color: var(--gold-vibrant); text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">View All 12 Shrines →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-white" id="facts">
+    <div class="lm-container">
+      <div class="lm-section-header">
+        <span class="lm-section-tag">Did You Know?</span>
+        <h2><i class="fa-solid fa-wand-magic-sparkles gold-icon"></i> Sacred Numbers, Records & Astounding Facts</h2>
+        <p>The scale, duration, and human devotion embedded in India's temple tradition produces some of the most astounding numbers in the history of civilization.</p>
+      </div>
+      <div class="lm-facts-strip">
+        <div class="lm-fact-item">
+          <span class="lm-fact-num"><span class="stat-number" data-target="7" data-suffix=" Secs">0</span> Secs</span>
+          <span class="lm-fact-title">Bell Resonance</span>
+          <span class="lm-fact-desc">Duration temple bell rings — proven to activate both brain hemispheres</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num"><span class="stat-number" data-target="108">0</span></span>
+          <span class="lm-fact-title">Sacred Number</span>
+          <span class="lm-fact-desc">Earth-Sun distance = 108 × Sun's diameter. The cosmos in a number.</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num"><span class="stat-number" data-target="156" data-suffix=" acres">0</span> acres</span>
+          <span class="lm-fact-title">Srirangam</span>
+          <span class="lm-fact-desc">World's largest functioning temple complex — a complete ancient city</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num"><span class="stat-number" data-target="10000" data-suffix="+">0</span></span>
+          <span class="lm-fact-title">Pilgrims/day</span>
+          <span class="lm-fact-desc">Fed free at Puri Jagannath's kitchen — world's largest religious kitchen</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num"><span class="stat-number" data-target="7">0</span>th CE</span>
+          <span class="lm-fact-title">Virupaksha</span>
+          <span class="lm-fact-desc">Continuously active since 7th century — India's longest functioning temple</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num">₹4,000Cr</span>
+          <span class="lm-fact-title">Tirupati Revenue</span>
+          <span class="lm-fact-desc">Annual donations — World's richest religious institution</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num">Zero</span>
+          <span class="lm-fact-title">Mortar Used</span>
+          <span class="lm-fact-desc">Many ancient temples — interlocked stone only. Standing 1,000+ years.</span>
+        </div>
+        <div class="lm-fact-item">
+          <span class="lm-fact-num">20,000</span>
+          <span class="lm-fact-title">Sculptures</span>
+          <span class="lm-fact-desc">Akshardham Delhi — world's largest comprehensive Hindu temple complex</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-dark" id="timeline">
+    <div class="lm-container">
+      <div class="lm-section-header">
+        <span class="lm-section-tag">5,000 Years in Brief</span>
+        <h2><i class="fa-solid fa-scroll gold-icon"></i> The Grand Timeline of Temple Tradition</h2>
+        <p>From Vedic fire altars to Akshardham — the 5,000-year unbroken story of India's sacred architectural journey.</p>
+      </div>
+      <div class="lm-timeline">
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">3000 BCE</div>
+          <div class="lm-tl-content">
+            <h3>Indus Valley Sacred Structures</h3>
+            <p>The Great Bath at Mohenjo-daro — possibly India's first sacred water structure — shows that ritual purification and sacred space were central concerns of the subcontinent's earliest civilization. Fire altars at Kalibangan suggest organised Vedic-style ritual from the third millennium BCE.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1500 BCE</div>
+          <div class="lm-tl-content">
+            <h3>Vedic Fire Altars (Yajnas)</h3>
+            <p>The Rigvedic tradition worshipped in open-air fire altars (Yajnas) without permanent structures. The Agni Kunda (fire altar) itself was the mobile, temporary temple — built from bricks arranged in precise geometric patterns (Sulbasutras) that represent the earliest known systematic geometry in human history.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">300 BCE</div>
+          <div class="lm-tl-content">
+            <h3>First Structural Temples</h3>
+            <p>The Mauryan period (300 BCE) sees the transition from temporary sacred structures to permanent stone temples. The earliest known stone temples in India date to this period — marking the beginning of the 2,300-year tradition of stone temple construction that continues to the present day.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">300–700 CE</div>
+          <div class="lm-tl-content">
+            <h3>Gupta Golden Age</h3>
+            <p>The Gupta Empire (320–550 CE) is India's temple architecture golden age — the Dashavatara Temple at Deogarh, the Udayagiri caves, and the Bhitargaon brick temple represent the emergence of the distinctive Indian temple aesthetic. The Agama Shastras (temple science manuals) are codified in this period.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">700–1100 CE</div>
+          <div class="lm-tl-content">
+            <h3>Pallava, Chalukya & Chola Mastery</h3>
+            <p>The Shore Temple (700 CE), Kailasanatha Kanchipuram (720 CE), the Pattadakal complex (740 CE), and the Brihadeeswara Thanjavur (1010 CE) represent the absolute pinnacle of Indian temple architecture — engineering achievements that remain astonishing to contemporary architects and engineers.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">900–1300 CE</div>
+          <div class="lm-tl-content">
+            <h3>Khajuraho, Konark & North Indian Peak</h3>
+            <p>The Chandela dynasty's Khajuraho temples (950–1050 CE) and the Ganga dynasty's Sun Temple Konark (1250 CE) represent North Indian temple architecture at its most exuberant — every inch carved with mythological, devotional, erotic, and cosmic imagery of extraordinary technical virtuosity.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1336–1565 CE</div>
+          <div class="lm-tl-content">
+            <h3>Vijayanagara Empire — The Great Protector</h3>
+            <p>The Vijayanagara Empire (capital: Hampi) was the last great Hindu empire — its rulers rebuilt and expanded hundreds of temples destroyed during earlier invasions. The Virupaksha Temple, Vitthala Temple, and Lepakshi Temple represent this era's extraordinary combination of devotional intensity and artistic sophistication.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1600–1800 CE</div>
+          <div class="lm-tl-content">
+            <h3>Maratha Revival & Reconstruction</h3>
+            <p>The Maratha Empire under Shivaji and the Peshwas, and figures like Ahilyabai Holkar, undertook mass reconstruction of temples destroyed during the Mughal period. Kashi Vishwanath, Grishneshwar, Somnath, and scores of important temples were rebuilt or substantially renovated in this era of Hindu cultural renaissance.</p>
+          </div>
+        </div>
+        <div class="lm-tl-item">
+          <div class="lm-tl-dot"></div>
+          <div class="lm-tl-year">1900–Present</div>
+          <div class="lm-tl-content">
+            <h3>Modern Temple Renaissance</h3>
+            <p>The 20th and 21st centuries see a new golden age of temple construction — Birla Mandirs across India (1930s onward), ISKCON Bangalore (1997), Akshardham Gandhinagar (1992), Akshardham Delhi (2005), and the magnificent Ram Mandir Ayodhya (2024) demonstrate that India's sacred building tradition is not merely surviving but vibrantly alive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lm-section lm-cream" id="faq">
+    <div class="lm-container">
+      <div class="lm-section-header">
+        <span class="lm-section-tag">Common Questions</span>
+        <h2><i class="fa-solid fa-question gold-icon"></i> Frequently Asked Questions</h2>
+        <p>The most common questions visitors have about Hindu temples — answered simply and clearly.</p>
+      </div>
+      <div class="lm-faq-list">
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why do we remove shoes before entering a temple?</div>
+          <div class="lm-faq-a">Shoes carry the dust and energy of the outside world — the marketplace, the street, the ordinary. Removing them at the threshold is a physical act of transition: leaving the world of commerce and distraction and entering the world of the sacred. The temple floor itself is considered consecrated ground — sanctified by decades or centuries of worship energy that has soaked into the very stone. It is also practically hygienic — keeping the altar area clean.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why do we ring the bell when entering a temple?</div>
+          <div class="lm-faq-a">The bell's 7-second resonance (enabled by a specific 5-metal alloy called "bell metal") simultaneously activates both brain hemispheres, inducing a meditative theta-wave state. This was ancient neuro-acoustic engineering, not mere ceremony. The bell sound also announces your arrival to the deity, disperses the mental chatter of the journey, and creates a sonic boundary between the outer and inner worlds. In large temples, the combined sound of multiple massive bells ringing together creates a measurable shift in acoustic energy throughout the complex.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is Darshan and why is it so important?</div>
+          <div class="lm-faq-a">Darshan (literally "sight") is the sacred act of beholding the divine image — and simultaneously being seen by the divine. In Hindu theology, the eyes exchange energy — the blessed sight of the divine enters the devotee, and the wholehearted gaze of the devotee enters the divine. This is a genuine two-directional sacred exchange, not a metaphor. The devotee approaches, the curtain opens, and for a moment the two worlds make contact. This is the entire purpose of the pilgrimage — that one moment of direct sacred encounter.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is Pradakshina (circumambulation) and what does it mean?</div>
+          <div class="lm-faq-a">Pradakshina is the act of walking clockwise around the deity's sanctum, keeping the divine always on your right — the side of respect in Indian tradition. Each circle has several levels of meaning: physically, it keeps you moving in the direction the sun moves, aligning you with natural cycles; spiritually, it means "the divine is the centre of my existence — I revolve around the divine as planets revolve around the sun." The number of circles (3, 7, 11, 21, 108) varies by deity and occasion — each number carrying specific sacred significance.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is Prasad and why is it considered sacred?</div>
+          <div class="lm-faq-a">Prasad (literally "grace" or "gracious gift") is food first offered to the deity through specific mantras and ritual, and then distributed to devotees as the divine's own "remnant." The principle is that whatever the divine's presence touches takes on the divine's quality. Prasad therefore carries the specific energy of the deity's presence in concentrated, edible form. The famous Tirupati Laddu, Puri Jagannath's Mahaprasad, and Nathdwara's Panjiri are considered specially potent examples — sought by millions and believed to carry healing, blessing, and transformative power in themselves.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Can non-Hindus visit Hindu temples?</div>
+          <div class="lm-faq-a">The vast majority of Hindu temples throughout India are open to respectful visitors of all faiths and nationalities — the emphasis is placed on correct attitude (reverent, dress code observed, no disruption of ritual) rather than religious identity. However, a few notable exceptions exist: the Jagannath Temple in Puri and certain South Indian temples (Srirangam, Madurai Meenakshi's inner sanctum) have traditions restricting entry to non-Hindus in the innermost areas. These are older, tradition-specific policies. If in doubt, observe the posted notices or ask at the temple entrance.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the correct dress code for visiting a temple?</div>
+          <div class="lm-faq-a">General guidelines: Shoulders and knees should be covered (both men and women). Traditional Indian dress (saree, salwar kameez, kurta-dhoti) is always appropriate. Many South Indian temples specifically require men to remove their shirts and women to wear a saree or other traditional attire before entering the inner sanctum — dhoti or mundu is provided free at temple entrances. Avoid leather items (some temples prohibit leather belts and bags inside due to ahimsa principles). Cleanliness of clothing is important — fresh or at minimum clean garments are preferred.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the significance of the Shivlinga?</div>
+          <div class="lm-faq-a">"Linga" in Sanskrit means "symbol" or "mark" — not the anatomical interpretation sometimes suggested. The Shivlinga represents Shiva's formless, infinite, transcendent aspect — consciousness that has no beginning or end, no shape or gender, no form or feature. According to the Linga Purana, the universe itself emerged from the cosmic Linga of fire (Jyotirlinga). The cylindrical form mounted on the circular Yoni (base/source) represents the eternal union of consciousness (Shiva) and creative energy (Shakti) — the polarity from which all existence continuously emerges and into which it continuously returns.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why are temples built facing east?</div>
+          <div class="lm-faq-a">Most Hindu temples are oriented east-facing (toward sunrise) for multiple reasons simultaneously: astronomically, the first rays of the rising sun fall directly on the divine idol in the inner sanctum — the daily "divine awakening" by solar light; philosophically, east is the direction from which light and knowledge arise (east = "purva" — the first direction); practically, the orientation ensures the temple structure casts its shadow west, keeping the circumambulation path on the cooler, shaded side for much of the day. Some temples — like Mahakaleshwar Ujjain — face south for specific theological reasons related to Shiva's cosmic role.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why are temples always built near rivers or water bodies?</div>
+          <div class="lm-faq-a">Rivers represent the continuity of life, the flow of time, and the purifying power of moving water. Practically, flowing water was essential for the daily Abhishekam (sacred bathing of the deity), for ritual cleansing of devotees, and for the massive food preparations of temple kitchens serving thousands daily. Energetically, ancient Vastu Shastra holds that flowing water adjacent to a temple amplifies and distributes the temple's energy field throughout the surrounding landscape. Many major temples — Kashi Vishwanath (Ganga), Tirupati (Swarnamukhi River), Srirangam (Kaveri) — are literally built within a meander curve, creating a natural sacred island.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the difference between a Mandir, Devasthana, Kovil, and Derasar?</div>
+          <div class="lm-faq-a">"Mandir" is the North Indian (Hindi/Sanskrit) term, from "mandira" meaning a dwelling or hall. "Devasthana" (Sanskrit: deva = divine, sthana = place/abode) is the classical Sanskrit term found in ancient texts and official temple inscriptions. "Kovil" or "Koyil" is the Tamil word, from "Ko" (King/God) + "il" (house) — the King's dwelling. "Derasar" is the Jain term for their temple. All refer to the same category of sacred architectural space designed to make the divine accessible in physical form — reflecting India's extraordinary linguistic diversity within a unified sacred culture.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is Abhishekam and why is it performed?</div>
+          <div class="lm-faq-a">Abhishekam (sacred bathing) is the ritual pouring of specific substances over the divine idol: Panchamrut (milk, curd, honey, ghee, sugar), followed by water, coconut water, sandalwood water, and rose water. Each substance corresponds to one of the five elements and one of the five senses — so the offering is complete surrender of the entire sensory existence. Beyond symbolism, the specific substances used have demonstrated antimicrobial properties — keeping stone idols hygienically clean while also providing a regular infusion of organic compounds that the stone slowly absorbs over centuries, darkening and enriching it with a distinctive patina of devotion.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the significance of the 108 number in Hindu tradition?</div>
+          <div class="lm-faq-a">108 is encoded throughout Hindu sacred mathematics: 108 Upanishads (philosophical texts), 108 beads on a mala (prayer rosary), 108 divine names in most Ashottoram (108-name hymns), 108 sacred Vaishnava shrines (Divya Desams), 108 forms of Shiva's dance, 108 sacred acupressure points in the body. The cosmic connection: Earth-to-Sun distance = 108 × Sun's diameter; Earth-to-Moon distance = 108 × Moon's diameter. This makes 108 literally a cosmic constant connecting Earth, Sun, and Moon in a single mathematical ratio — what ancient seers encoded in every rosary, every ritual count, every sacred architecture proportion.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is a Shakti Peetha and why are there 51 of them?</div>
+          <div class="lm-faq-a">Shakti Peethas are sacred sites where body parts of Goddess Sati are believed to have fallen when Lord Shiva carried her grief-stricken corpse through the cosmos and Lord Vishnu sent his Sudarshana Chakra to dismember it (to release Shiva from his paralysing grief). Each fallen body part consecrated the landscape where it landed — creating a sacred geography of 51 (some traditions say 108) powerful Devi sites spread across the entire Indian subcontinent and neighbouring countries. Together the 51 Shakti Peethas form a sacred mandala covering the entire subcontinent with the goddess's body — making the entire land itself a living temple.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the difference between Shaiva, Vaishnava, and Shakta temples?</div>
+          <div class="lm-faq-a">Shaiva temples (dedicated to Lord Shiva) feature the Shivlinga as the primary icon, often with Nandi (the bull) in the entrance corridor, Bilva leaves as primary offerings, and Abhishekam as the primary ritual. Vaishnava temples (dedicated to Lord Vishnu and his avatars) feature standing or reclining Vishnu icons, Tulasi (basil) as primary offering, and emphasise Stotra (hymn) chanting. Shakta temples (dedicated to the Goddess in her various forms) feature fierce or gentle Devi icons, red flowers and kumkum as primary offerings, and particularly intense worship during Navratri. Many temples are blend-types — worshipping multiple deities in separate shrines.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is a Char Dham pilgrimage and who should do it?</div>
+          <div class="lm-faq-a">Char Dham ("four abodes of the divine") refers to India's four most sacred pilgrimage sites — Badrinath (Vishnu, North — Uttarakhand), Dwarka (Krishna, West — Gujarat), Puri (Jagannath, East — Odisha), and Rameswaram (Shiva, South — Tamil Nadu). Together they represent the four cardinal directions and four aspects of the divine. The traditional belief is that completing the Char Dham pilgrimage — ideally clockwise from east (Puri) — purifies all accumulated karma and brings liberation (moksha) at death. It is traditionally undertaken at least once in a lifetime, ideally in old age when family responsibilities are complete.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What are the 12 Jyotirlingas and why are they special?</div>
+          <div class="lm-faq-a">Jyotirlingas (literally "Columns of Light") are 12 sacred sites where Lord Shiva is believed to have manifested as an infinite pillar of fire — transcending the universe from below the Earth to above the sky, visible to both Brahma and Vishnu simultaneously. This mythological event established Shiva as the supreme, boundless cosmic principle. Today, the 12 Jyotirlinga temples — from Somnath (Gujarat) to Ramanathaswamy (Tamil Nadu) — are considered the most potent Shiva shrines in existence. Visiting all 12 is said to purify all sins of all lifetimes simultaneously and guarantee liberation.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the best time to visit major temples?</div>
+          <div class="lm-faq-a">Generally: October to March (winter) is ideal for most temples in terms of weather and crowd management. Avoid peak festivals unless experiencing them is the specific purpose of your visit — the same temples can have 10x their normal crowds during Navratri, Maha Shivaratri, or specific car festivals. Early morning (first 2 hours after opening) gives the most peaceful, least crowded darshan and the freshest, most energetically charged atmosphere. For specific festivals: Maha Shivaratri for Shiva temples, Ram Navami for Rama temples, Janmashtami for Krishna temples, and any Navratri for Shakti temples.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why do temples have so many deities — is Hinduism polytheistic?</div>
+          <div class="lm-faq-a">Hindu philosophy is technically Henotheistic (or Monistic Monotheism with polytheistic expressions) — the foundational philosophical position is that there is one infinite, formless Reality (Brahman) that manifests in infinite forms. Each deity — Shiva, Vishnu, Durga, Ganesha, Saraswati — is a specific quality or aspect of this single infinite Reality made accessible to human devotion. The multiplicity of deities is not a contradiction of the One — it is the expression of the One's infinite richness. The great 20th century saint Ramakrishna demonstrated this by achieving liberation through Kali, Rama, and even Christianity — different paths leading to the same summit.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">What is the meaning of the Om symbol carved on temples?</div>
+          <div class="lm-faq-a">The symbol OM (also written AUM) represents the three fundamental states of consciousness — A (waking), U (dream), M (deep sleep) — unified in the silence that follows their utterance (Turiya — the fourth state of pure awareness that underlies all three). It is also the phonetic representation of the sound from which the universe was created (the first vibration of creation), and the sound of the universe's own electromagnetic frequency. OM is placed on temple entrances as a reminder that entering the temple is entering the space of pure consciousness — the state from which all creation emerges and into which all creation returns.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">How should I prepare before going on a pilgrimage?</div>
+          <div class="lm-faq-a">Traditional preparation (Tirtha Yatra preparation): 1) Make a formal Sankalpa — a clear mental declaration of your pilgrimage purpose, 2) Observe purity for 3 days before departure (vegetarian food, early rising, reduced entertainment), 3) Read or listen to stories about the deity of the temple you're visiting (builds devotional context and emotional resonance), 4) Travel light — pilgrimage is about shedding, not accumulating, 5) Approach with a specific prayer or intention rather than going "generally" — the tradition holds that the divine grants what is sincerely asked with a clear heart, not what is vaguely wished for from a distracted mind.</div>
+        </div>
+
+        <div class="lm-faq-item">
+          <div class="lm-faq-q">Why do people donate to temples — where does the money go?</div>
+          <div class="lm-faq-a">Temple donations (Dakshina) in India fund an extraordinary range of public services operated by temple trusts: free food (Annadanam) for pilgrims and the poor (Jagannath Puri feeds 10,000 people free every single day), free hospitals and clinics, schools and colleges, orphanages, water conservation projects, and cultural institutions. The Tirumala Tirupati Devasthanams (TTD) — India's richest temple — runs 65 educational institutions, hundreds of free hospitals, thousands of scholarships, and provides free meals to 50,000+ daily. Contrary to common perception, India's major temple trusts are among the most efficient large-scale social welfare institutions in the country.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lm-cta">
+    <h2><i class="fa-solid fa-map"></i> Begin Your Divine Journey Today</h2>
+    <p>Explore 89 premium temple pages with detailed histories, sacred architecture, festival guides, interactive maps, and spiritual insights — all in one place.</p>
+    <div class="lm-cta-btns">
+      <a href="temples.html" class="lm-btn lm-btn-primary">Browse Temple Gallery →</a>
+      <a href="jyotirlinga.html" class="lm-btn lm-btn-ghost">Explore 12 Jyotirlingas →</a>
+      <a href="about.html" class="lm-btn lm-btn-ghost">About Divine Journey →</a>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey" class="footer-logo">
+      <span class="footer-brand-name">DIVINE JOURNEY</span>
+      <p class="footer-tagline">India's sacred temples, explored with depth, devotion, and detail.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html"><i class="fa-solid fa-house gold-icon"></i> Home</a>
+        <a href="temples.html"><i class="fa-solid fa-vihara gold-icon"></i> All Temples</a>
+        <a href="jyotirlinga.html"><i class="fa-solid fa-dharmachakra gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="about.html"><i class="fa-solid fa-hands-praying gold-icon"></i> About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Temple Sections</h4>
+        <a href="temples.html#jyotirlingas"><i class="fa-solid fa-gopuram gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="temples.html#char-dham"><i class="fa-solid fa-hands-praying gold-icon"></i> Char Dham</a>
+        <a href="temples.html#shakti-peethas"><i class="fa-solid fa-spa gold-icon"></i> Shakti Peethas</a>
+        <a href="temples.html#south-india"><i class="fa-solid fa-tree gold-icon"></i> South India</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="learnmore.html"><i class="fa-solid fa-graduation-cap gold-icon"></i> Sacred Knowledge</a>
+        <a href="learnmore.html"><i class="fa-solid fa-archway gold-icon"></i> Architecture Guide</a>
+        <a href="learnmore.html"><i class="fa-solid fa-person-walking gold-icon"></i> Pilgrimage Tips</a>
+        <a href="about.html"><i class="fa-solid fa-star gold-icon"></i> Our Mission</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Divine Journey &mdash; Built for Excellence &amp; Devotion</p>
+    <p class="footer-mantra"><i class="fa-solid fa-om"></i> &nbsp;Om Namah Shivaya &nbsp;|&nbsp; Jai Shri Ram &nbsp;|&nbsp; Radhe Radhe &nbsp;<i class="fa-solid fa-om"></i></p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

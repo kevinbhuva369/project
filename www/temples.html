@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Journey | Temples — 89 Sacred Temples of India</title>
+    <meta name="description" content="Browse all 89 sacred Hindu temples — organized by category: Jyotirlingas, Char Dham, Shakti Peethas, North India, South India, East India, West India and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="colorful-arabesque-mandala-pattern-background_492473-352.avif" type="image/x-icon">
+    <link rel="stylesheet" href="temples.css">
+    <style>
+
+      /* Category Section Header */
+      .cat-section { padding: 60px 24px 20px; }
+      .cat-section + .gallery-grid { padding-top: 10px; }
+      .cat-header {
+        max-width: 1200px;
+        margin: 0 auto 32px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-bottom: 18px;
+        border-bottom: 2px solid;
+      }
+      .cat-header.gold-border { border-color: var(--gold, var(--gold)); background: transparent; }
+      .cat-header.maroon-border { border-color: var(--deep-maroon, #5C1611); }
+      .cat-icon { font-size: 2rem; flex-shrink: 0; }
+
+      .cat-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--gold, var(--gold));
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .cat-name {
+        font-family: 'Cinzel Decorative', cursive;
+        color: var(--deep-maroon, #5C1611);
+        font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+        line-height: 1.2;
+      }
+
+      /* Dark section variant */
+      .cat-section-dark { background: linear-gradient(160deg, var(--maroon-deeper) 0%, var(--deep-maroon) 60%, var(--maroon-darker, #010810) 100%); }
+      .cat-section-dark .cat-name { color: #fff; }
+      .cat-section-dark .cat-header { border-color: rgba(255,255,255,0.2); }
+      .cat-section-dark .gallery-grid { background: transparent; }
+      .cat-section-cream { background: var(--cream, #F8F9FA); }
+      .cat-section-white { background: #fff; }
+
+      /* Override gallery grid within sections */
+      .cat-section .gallery-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+        background: transparent;
+      }
+    </style>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+        <header>
+        <nav class="nav-main">
+            <a href="index.html" class="nav-icon">
+                <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey Logo" id="icon">
+                <span class="logo-text">DIVINE JOURNEY</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links-desktop">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li>
+                  <a href="temples.html" class="active">TEMPLES <i class="fa-solid fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="temples.html#char-dham">Char Dham</a></li>
+                    <li><a href="temples.html#shakti-peethas">Shakti Peethas</a></li>
+                    <li><a href="temples.html#north-india">North India</a></li>
+                    <li><a href="temples.html#south-india">South India</a></li>
+                    <li><a href="temples.html#east-india">East India</a></li>
+                    <li><a href="temples.html#west-india">West India</a></li>
+                    <li><a href="temples.html#modern-temples">Modern Temples</a></li>
+                    <li><a href="temples.html#krishna-temples">Krishna Temples</a></li>
+                  </ul>
+                </li>
+                <li><a href="jyotirlinga.html">JYOTIRLINGAS</a></li>
+                        <li class="nav-search-container">
+                  <button id="searchBtn" class="premium-nav-search" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-text-nav">Search</span></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay">
+      <div class="nav-overlay-content">
+        <a href="index.html" class="overlay-link">HOME</a>
+        <a href="about.html" class="overlay-link">ABOUT</a>
+        <a href="temples.html" class="overlay-link active">TEMPLES</a>
+        <a href="jyotirlinga.html" class="overlay-link">JYOTIRLINGAS</a>
+        <a href="learnmore.html" class="overlay-link">KNOWLEDGE</a>
+      </div>
+      <div class="nav-overlay-footer">
+        <p><i class="fa-solid fa-om gold-icon"></i> Divine Journey — India's Sacred Heritage</p>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house gold-icon"></i>
+        <span>Home</span>
+      </a>
+      <a href="temples.html" class="bottom-nav-item active">
+        <i class="fa-solid fa-vihara gold-icon"></i>
+        <span>Temples</span>
+      </a>
+      <a href="jyotirlinga.html" class="bottom-nav-item">
+        <i class="fa-solid fa-gopuram gold-icon"></i>
+        <span>Jyotir</span>
+      </a>
+      <a href="#" class="bottom-nav-item" id="mobileSearchTrigger">
+        <i class="fa-solid fa-magnifying-glass gold-icon"></i>
+        <span>Search</span>
+      </a>
+    </nav>
+
+    <div id="search-results-overlay" class="search-results-overlay" style="display:none;"></div>
+
+    <main>
+
+
+        <section class="gallery-hero scroll-reveal">
+            <div class="hero-tag">A Pilgrimage Through Time</div>
+            <h1 class="divine-title"><i class="fa-solid fa-map-location-dot gold-icon"></i> Exploring the <span class="stat-number" data-target="89">0</span> Sacred Temples</h1>
+            <p>From the snow-capped peaks of the Himalayas to the golden coasts of the South, explore India's spiritual architecture in exhaustive detail. <a href="jyotirlinga.html" style="color:var(--gold,var(--gold));">Explore <span class="stat-number" data-target="12">0</span> Jyotirlingas separately →</a></p>
+        </section>
+
+
+
+        <section class="cat-section cat-section-cream" id="char-dham">
+          <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-hands-praying gold-icon"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">India's Four Sacred Abodes</span>
+              <span class="cat-name">Char Dham &amp; Chota Char Dham</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Badrinath.html" class="gallery-item scroll-reveal" data-delay="0.1s" style="display:block;">
+                <img src="images/badrinath.png" alt="Badrinath">
+                <div class="overlay">Badrinath — Uttarakhand</div>
+            </a>
+            <a href="viewpage/KEDARNATH.html" class="gallery-item scroll-reveal" data-delay="0.2s" style="display:block;">
+                <img src="images/kedarnath_temple.png" alt="Kedarnath">
+                <div class="overlay">Kedarnath — Uttarakhand</div>
+            </a>
+            <a href="viewpage/Gangotri.html" class="gallery-item scroll-reveal" data-delay="0.3s" style="display:block;">
+                <img src="images/gangotri.png" alt="Gangotri">
+                <div class="overlay">Gangotri — Uttarakhand</div>
+            </a>
+            <a href="viewpage/Yamunotri.html" class="gallery-item scroll-reveal" data-delay="0.4s" style="display:block;">
+                <img src="images/yamunotri.png" alt="Yamunotri">
+                <div class="overlay">Yamunotri — Uttarakhand</div>
+            </a>
+            <a href="viewpage/dwarka.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/dwarka_temple.png" alt="Dwarkadhish">
+                <div class="overlay">Dwarkadhish — Dwarka, Gujarat</div>
+            </a>
+            <a href="viewpage/Puri Jagannath.html" class="gallery-item scroll-reveal" data-delay="0.2s" style="display:block;">
+                <img src="images/shree_jagannatha_temple.png" alt="Puri Jagannath">
+                <div class="overlay">Puri Jagannath — Odisha</div>
+            </a>
+            <a href="viewpage/Ramanathaswamy.html" class="gallery-item scroll-reveal" data-delay="0.3s" style="display:block;">
+                <img src="images/rameshwaram.png" alt="Rameswaram">
+                <div class="overlay">Rameswaram — Tamil Nadu</div>
+            </a>
+            <a href="viewpage/Trijuginarayan.html" class="gallery-item scroll-reveal" data-delay="0.4s" style="display:block;">
+                <img src="images/trijuginarayan_temple.png" alt="Trijuginarayan">
+                <div class="overlay">Trijuginarayan — Uttarakhand</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-dark" id="shakti-peethas">
+          <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-spa gold-icon"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">Goddess Sati's Sacred Sites</span>
+              <span class="cat-name" style="color:#fff;">Shakti Peethas</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Kamakhya Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/kamakhya.png" alt="Kamakhya Temple">
+                <div class="overlay">Kamakhya — Guwahati, Assam</div>
+            </a>
+            <a href="viewpage/Vaishno Devi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/vaishno_devi.png" alt="Vaishno Devi">
+                <div class="overlay">Vaishno Devi — Katra, J&amp;K</div>
+            </a>
+            <a href="viewpage/Tarapith Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/asset_ashram.png" alt="Tarapith">
+                <div class="overlay">Tarapith — West Bengal</div>
+            </a>
+            <a href="viewpage/Kalighat Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_kashi_1775188213416.png" alt="Kalighat Temple">
+                <div class="overlay">Kalighat — Kolkata, West Bengal</div>
+            </a>
+            <a href="viewpage/Ambaji Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/omkareshwar.png" alt="Ambaji Temple">
+                <div class="overlay">Ambaji — Banaskantha, Gujarat</div>
+            </a>
+            <a href="viewpage/Chotila Chamunda Mata.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/bhimashankar.png" alt="Chotila Chamunda Mata">
+                <div class="overlay">Chotila Chamunda Mata — Gujarat</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-cream" id="north-india">
+          <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-mountain gold-icon"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">UP, Delhi, Rajasthan, Himachal, Uttarakhand</span>
+              <span class="cat-name">North India Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Ram Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ram_mandir.png" alt="Ram Mandir">
+                <div class="overlay">Ram Mandir — Ayodhya, UP</div>
+            </a>
+            <a href="viewpage/Hanuman Garhi Ayodhya.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/hanuman_garhi_new.png" alt="Hanuman Garhi">
+                <div class="overlay">Hanuman Garhi — Ayodhya, UP</div>
+            </a>
+            <a href="viewpage/Shri Krishna Janmabhoomi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_ram_mandir_1775188064754.png" alt="Shri Krishna Janmabhoomi">
+                <div class="overlay">Krishna Janmabhoomi — Mathura, UP</div>
+            </a>
+            <a href="viewpage/Govardhan Hill.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/govardhan_hill_new.png" alt="Govardhan Hill">
+                <div class="overlay">Govardhan Hill — Mathura, UP</div>
+            </a>
+            <a href="viewpage/Kashi Vishwanath.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/kashi_vishwanath_temple.png" alt="Kashi Vishwanath">
+                <div class="overlay">Kashi Vishwanath — Varanasi, UP</div>
+            </a>
+            <a href="viewpage/Naimisharanya.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/trimbakeshwar.png" alt="Naimisharanya">
+                <div class="overlay">Naimisharanya — Sitapur, UP</div>
+            </a>
+            <a href="viewpage/Mehandipur Balaji.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/kashi_vishwanath_temple.png" alt="Mehandipur Balaji">
+                <div class="overlay">Mehandipur Balaji — Rajasthan</div>
+            </a>
+            <a href="viewpage/Khatu Shyam Ji.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_lingaraja_1775188142791.png" alt="Khatu Shyam Ji">
+                <div class="overlay">Khatu Shyam Ji — Rajasthan</div>
+            </a>
+            <a href="viewpage/Birla Mandir Delhi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_mahakaleshwar_1775188118637.png" alt="Birla Mandir Delhi">
+                <div class="overlay">Birla Mandir — New Delhi</div>
+            </a>
+            <a href="viewpage/Akshardham Delhi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/nageshwar.png" alt="Akshardham Delhi">
+                <div class="overlay">Akshardham — New Delhi</div>
+            </a>
+            <a href="viewpage/Jakhu Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/jakhu_temple.png" alt="Jakhu Temple">
+                <div class="overlay">Jakhu Temple — Shimla, HP</div>
+            </a>
+            <a href="viewpage/Badrinath.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/badrinath.png" alt="Badrinath">
+                <div class="overlay">Badrinath — Chamoli, Uttarakhand</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-dark" id="south-india">
+          <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-gopuram gold-icon"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">Tamil Nadu, Andhra Pradesh, Karnataka, Kerala</span>
+              <span class="cat-name" style="color:#fff;">South India Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/MEENAKSHI TEMPLE.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/meenakshi_temple.png" alt="Meenakshi Temple">
+                <div class="overlay">Meenakshi Temple — Madurai, TN</div>
+            </a>
+            <a href="viewpage/Tirupati Venkateswara.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/tirupati.png" alt="Tirupati Venkateswara">
+                <div class="overlay">Tirupati Venkateswara — Andhra Pradesh</div>
+            </a>
+            <a href="viewpage/Srirangam Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_meenakshi_1775188091462.png" alt="Srirangam Temple">
+                <div class="overlay">Srirangam — Tiruchirappalli, TN</div>
+            </a>
+            <a href="viewpage/Thanjavur Brihadeeswara.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/thanjavur_brihadeeswara_real.png" alt="Brihadeeswara Temple">
+                <div class="overlay">Brihadeeswara — Thanjavur, TN</div>
+            </a>
+            <a href="viewpage/Shore Temple Mahabalipuram.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/rameshwaram.png" alt="Shore Temple">
+                <div class="overlay">Shore Temple — Mahabalipuram, TN</div>
+            </a>
+            <a href="viewpage/Arunachalesvara Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/mahakaleshwar.png" alt="Arunachalesvara Temple">
+                <div class="overlay">Arunachalesvara — Tiruvannamalai, TN</div>
+            </a>
+            <a href="viewpage/Chidambaram.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/chidambaram.png" alt="Chidambaram">
+                <div class="overlay">Nataraja Temple — Chidambaram, TN</div>
+            </a>
+            <a href="viewpage/Sabarimala Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/curated_ai_art_1.png" alt="Sabarimala Temple">
+                <div class="overlay">Sabarimala — Kerala</div>
+            </a>
+            <a href="viewpage/Padmanabhaswamy Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/temple_style_d.png" alt="Padmanabhaswamy Temple">
+                <div class="overlay">Padmanabhaswamy — Thiruvananthapuram, Kerala</div>
+            </a>
+            <a href="viewpage/Kanchipuram Temples.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/curated_ai_art_2.png" alt="Kanchipuram Temples">
+                <div class="overlay">Kanchipuram — Tamil Nadu</div>
+            </a>
+            <a href="viewpage/Murudeshwar Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/asset_south.png" alt="Murudeshwar Temple">
+                <div class="overlay">Murudeshwar — Karnataka</div>
+            </a>
+            <a href="viewpage/Virupaksha.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/virupaksha.png" alt="Virupaksha">
+                <div class="overlay">Virupaksha — Hampi, Karnataka</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-cream" id="east-india">
+          <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-water gold-icon"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">West Bengal, Odisha, Assam, Jharkhand</span>
+              <span class="cat-name">East India Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Shree Jagannatha Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/shree_jagannatha_temple.png" alt="Jagannath Temple">
+                <div class="overlay">Jagannath Temple — Puri, Odisha</div>
+            </a>
+            <a href="viewpage/Lingaraj Temple Bhubaneswar.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/asset_ashram.png" alt="Lingaraj Temple">
+                <div class="overlay">Lingaraj Temple — Bhubaneswar, Odisha</div>
+            </a>
+            <a href="viewpage/Konark Sun Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/konark_sun_temple.png" alt="Konark Sun Temple">
+                <div class="overlay">Konark Sun Temple — Odisha</div>
+            </a>
+            <a href="viewpage/Dakshineswar Kali.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/curated_ai_art_0.png" alt="Dakshineswar Kali">
+                <div class="overlay">Dakshineswar Kali — Kolkata, WB</div>
+            </a>
+            <a href="viewpage/Kalighat Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_kashi_1775188213416.png" alt="Kalighat Temple">
+                <div class="overlay">Kalighat Temple — Kolkata, WB</div>
+            </a>
+            <a href="viewpage/Tarapith Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/asset_ashram.png" alt="Tarapith Temple">
+                <div class="overlay">Tarapith — Birbhum, West Bengal</div>
+            </a>
+            <a href="viewpage/Kamakhya Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/kamakhya.png" alt="Kamakhya Temple">
+                <div class="overlay">Kamakhya — Guwahati, Assam</div>
+            </a>
+            <a href="viewpage/Umananda Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/baidyanath.png" alt="Umananda Temple">
+                <div class="overlay">Umananda — Guwahati, Assam</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-dark" id="west-india">
+          <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-sun"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">Gujarat, Maharashtra, Rajasthan</span>
+              <span class="cat-name" style="color:#fff;">West India Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Somnath Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/somnath_temple.png" alt="Somnath Temple">
+                <div class="overlay">Somnath — Gir Somnath, Gujarat</div>
+            </a>
+            <a href="viewpage/dwarka.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/dwarka_temple.png" alt="Dwarkadhish">
+                <div class="overlay">Dwarkadhish — Dwarka, Gujarat</div>
+            </a>
+            <a href="viewpage/Ambaji Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/omkareshwar.png" alt="Ambaji Temple">
+                <div class="overlay">Ambaji — Banaskantha, Gujarat</div>
+            </a>
+            <a href="viewpage/Pavagadh Mahakali.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/nageshwar.png" alt="Pavagadh Mahakali">
+                <div class="overlay">Pavagadh Mahakali — Panchmahal, Gujarat</div>
+            </a>
+            <a href="viewpage/Bahuchar Mata Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/trimbakeshwar.png" alt="Bahuchar Mata">
+                <div class="overlay">Bahuchar Mata — Mehsana, Gujarat</div>
+            </a>
+            <a href="viewpage/Chotila Chamunda Mata.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/bhimashankar.png" alt="Chotila Chamunda Mata">
+                <div class="overlay">Chotila Chamunda Mata — Gujarat</div>
+            </a>
+            <a href="viewpage/Shirdi Sai Baba Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/temple_style_a.png" alt="Shirdi Sai Baba">
+                <div class="overlay">Shirdi Sai Baba — Ahmednagar, MH</div>
+            </a>
+            <a href="viewpage/Siddhivinayak Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/asset_north.png" alt="Siddhivinayak Temple">
+                <div class="overlay">Siddhivinayak — Mumbai, Maharashtra</div>
+            </a>
+            <a href="viewpage/Akshardham Gandhinagar.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/nageshwar.png" alt="Akshardham Gandhinagar">
+                <div class="overlay">Akshardham — Gandhinagar, Gujarat</div>
+            </a>
+            <a href="viewpage/Nathdwara Shrinathji.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/temple_style_e.png" alt="Nathdwara Shrinathji">
+                <div class="overlay">Nathdwara Shrinathji — Rajsamand, RJ</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-cream" id="modern-temples">
+          <div class="cat-header maroon-border" style="max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">Contemporary Sacred Architecture</span>
+              <span class="cat-name">Modern &amp; Iconic Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Ram Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ram_mandir.png" alt="Ram Mandir Ayodhya">
+                <div class="overlay">Ram Mandir — Ayodhya, UP (2024)</div>
+            </a>
+            <a href="viewpage/Akshardham Delhi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/akshardham.png" alt="Akshardham Delhi">
+                <div class="overlay">Akshardham — New Delhi (2005)</div>
+            </a>
+            <a href="viewpage/Iskcon Temple Vrindavan.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/temple_style_c.png" alt="ISKCON Vrindavan">
+                <div class="overlay">ISKCON — Vrindavan, UP</div>
+            </a>
+            <a href="viewpage/Iskcon Bangalore.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/mallikarjuna.png" alt="ISKCON Bangalore">
+                <div class="overlay">ISKCON — Bangalore, Karnataka</div>
+            </a>
+            <a href="viewpage/Lotus Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/temple_style_b.png" alt="Lotus Temple Delhi">
+                <div class="overlay">Lotus Temple — New Delhi</div>
+            </a>
+            <a href="viewpage/Birla Mandir Delhi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_mahakaleshwar_1775188118637.png" alt="Birla Mandir Delhi">
+                <div class="overlay">Birla Mandir — New Delhi</div>
+            </a>
+            <a href="viewpage/Prem Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/prem_mandir.png" alt="Prem Mandir">
+                <div class="overlay">Prem Mandir — Vrindavan, UP (2012)</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="cat-section cat-section-dark" id="krishna-temples">
+          <div class="cat-header" style="border-color:rgba(255,255,255,0.3);max-width:1200px;margin:0 auto 32px;">
+            <span class="cat-icon"><i class="fa-solid fa-feather"></i></span>
+            <div class="cat-title-wrap">
+              <span class="cat-label">Devotion to Lord Krishna</span>
+              <span class="cat-name" style="color:#fff;">Krishna &amp; Vrindavan Temples</span>
+            </div>
+          </div>
+          <div class="gallery-grid" style="max-width:1200px;margin:0 auto;background:transparent;">
+            <a href="viewpage/Prem Mandir.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/prem_mandir.png" alt="Prem Mandir">
+                <div class="overlay">Prem Mandir — Vrindavan, UP</div>
+            </a>
+            <a href="viewpage/Shri Hit Radha Keli Kunj.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/keli_kunj.png" alt="Shri Hit Radha Keli Kunj">
+                <div class="overlay">Radha Keli Kunj — Vrindavan, UP</div>
+            </a>
+            <a href="viewpage/Banke Bihari Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/curated_ai_art_4.png" alt="Banke Bihari Temple">
+                <div class="overlay">Banke Bihari — Vrindavan, UP</div>
+            </a>
+            <a href="viewpage/Shri Krishna Janmabhoomi.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_ram_mandir_1775188064754.png" alt="Krishna Janmabhoomi">
+                <div class="overlay">Krishna Janmabhoomi — Mathura, UP</div>
+            </a>
+            <a href="viewpage/Barsana Radha Rani.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/ai_konark_1775188169627.png" alt="Barsana Radha Rani">
+                <div class="overlay">Radha Rani Temple — Barsana, UP</div>
+            </a>
+            <a href="viewpage/Nandgaon Temple.html" class="gallery-item scroll-reveal" style="display:block;">
+                <img src="images/kedarnath_temple.png" alt="Nandgaon Temple">
+                <div class="overlay">Nanda Baba Temple — Nandgaon, UP</div>
+            </a>
+          </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="colorful-arabesque-mandala-pattern-background_492473-352.avif" alt="Divine Journey" class="footer-logo">
+      <span class="footer-brand-name">DIVINE JOURNEY</span>
+      <p class="footer-tagline">India's sacred temples, explored with depth, devotion, and detail.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html"><i class="fa-solid fa-house gold-icon"></i> Home</a>
+        <a href="temples.html"><i class="fa-solid fa-vihara gold-icon"></i> All Temples</a>
+        <a href="jyotirlinga.html"><i class="fa-solid fa-dharmachakra gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="about.html"><i class="fa-solid fa-hands-praying gold-icon"></i> About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Temple Sections</h4>
+        <a href="temples.html#jyotirlingas"><i class="fa-solid fa-gopuram gold-icon"></i> <span class="stat-number" data-target="12">0</span> Jyotirlingas</a>
+        <a href="temples.html#char-dham"><i class="fa-solid fa-hands-praying gold-icon"></i> Char Dham</a>
+        <a href="temples.html#shakti-peethas"><i class="fa-solid fa-spa gold-icon"></i> Shakti Peethas</a>
+        <a href="temples.html#south-india"><i class="fa-solid fa-tree gold-icon"></i> South India</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="learnmore.html"><i class="fa-solid fa-graduation-cap gold-icon"></i> Sacred Knowledge</a>
+        <a href="learnmore.html"><i class="fa-solid fa-archway gold-icon"></i> Architecture Guide</a>
+        <a href="learnmore.html"><i class="fa-solid fa-person-walking gold-icon"></i> Pilgrimage Tips</a>
+        <a href="about.html"><i class="fa-solid fa-star gold-icon"></i> Our Mission</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Divine Journey &mdash; Built for Excellence &amp; Devotion</p>
+    <p class="footer-mantra"><i class="fa-solid fa-om gold-icon"></i> &nbsp;Om Namah Shivaya &nbsp;|&nbsp; Jai Shri Ram &nbsp;|&nbsp; Radhe Radhe &nbsp;<i class="fa-solid fa-om gold-icon"></i></p>
+  </div>
+</footer>
+
+      <script src="script.js"></script>
+</body>
+</html>

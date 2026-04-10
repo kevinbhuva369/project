@@ -1,0 +1,553 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   DIVINE JOURNEY — viewpage/temple1.css  (Modern, Clean & Legible Theme)
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ─── HIDE LOGOS AS REQUESTED ────────────────────────────────────────────── */
+.nav-icon img, 
+.footer-logo {
+  display: none !important;
+}
+
+/* ─── BODY & PAGE OFFSET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+body { 
+  margin-top: var(--nav-h); 
+  background: #f8f9fa; 
+  color: #333;
+}
+
+/* ─── TEMPLE HERO ─────────────────────────────────────────────────────────── */
+.temple-hero-section {
+  position: relative;
+  min-height: 80vh; 
+  display: flex;
+  align-items: center; 
+  background-color: #020C1B; 
+  background-size: 50% 100%, 50% 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Vertical Divider Decoration */
+.temple-hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold-vibrant, #d4a017), transparent);
+  z-index: 5;
+  opacity: 0.5;
+}
+
+.temple-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 50%;
+  background: radial-gradient(circle at 0% 50%, rgba(212,160,23,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 60px 6% 60px; 
+  max-width: 1400px;
+  margin: 0; 
+  width: 50%;
+  text-align: left;
+  animation: heroFadeIn 1s ease-out both;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: #ffffff;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.hero-content > p {
+  color: #f1f1f1;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content > p i { color: var(--gold-vibrant, #ffd700); font-size: 1.2rem; }
+
+/* Hero Badges */
+.hero-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+.badge:hover { 
+  background: rgba(255, 215, 0, 0.2); 
+  border-color: var(--gold-vibrant, #ffd700); 
+  transform: translateY(-2px);
+}
+
+/* ─── FACTS BAR (FLOATING & MODERN) ───────────────────────────────────────── */
+.facts-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  width: 90%;
+  margin: -60px auto 40px; 
+  border-top: 4px solid var(--gold-vibrant, #ffd700);
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 20px;
+  border-right: 1px solid #eee;
+  flex: 1;
+  min-width: 160px;
+  gap: 8px;
+  transition: all 0.3s ease;
+  color: #555;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.fact-item:last-child { border-right: none; }
+
+.fact-item:hover {
+  background: #fdfbf7;
+  transform: translateY(-3px);
+}
+
+.fact-item i {
+  font-size: 1.5rem;
+  color: var(--gold-vibrant, #d4a017);
+  margin-bottom: 5px;
+}
+
+.fact-item strong {
+  color: #222;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Standard number styling */
+.fact-item .stat-number {
+  color: var(--deep-maroon, #800000);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+/* ✨ FIX & ENHANCEMENT FOR TIME BOX ONLY (nth-child 4) ✨ */
+.fact-item:nth-child(4) {
+  display: flex;
+  flex-direction: row; /* Keeps everything in a row */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* CRITICAL: Prevents overflow if content gets too large */
+  gap: 8px; /* Proper spacing between items */
+  padding: 25px 10px; /* Slight padding adjust for row mode */
+  min-width: 220px; /* Give it a little more room to stretch horizontally */
+}
+
+/* Hide the <br> so it stays in one continuous row */
+.fact-item:nth-child(4) br {
+  display: none; 
+}
+
+/* Bigger, enhanced icon for the time box */
+.fact-item:nth-child(4) i {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+/* Enhanced label */
+.fact-item:nth-child(4) strong {
+  font-size: 1.1rem;
+}
+
+/* Bigger, bolder numbers for the time */
+.fact-item:nth-child(4) .stat-number {
+  font-size: 1.6rem; /* Enhanced size */
+  font-weight: 900;
+  display: inline-block;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Premium shadow */
+}
+
+/* ─── INFORMATION SECTION ─────────────────────────────────────────────────── */
+.information-section {
+  padding: 40px 5% 80px;
+  position: relative;
+}
+
+.text-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  position: relative;
+}
+
+/* ─── SACRED LEGACY TITLE ───────────────────────────── */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--deep-maroon, #800000);
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  gap: 15px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-vibrant, #d4a017), transparent);
+  border-radius: 2px;
+}
+
+.section-title i {
+  color: var(--gold-vibrant, #d4a017);
+  font-size: 1.8rem;
+}
+
+
+/* ─── DROP CAP LAYOUT (PHOTO ON LEFT, ALL TEXT ON RIGHT) ───────────── */
+.drop-cap-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  text-align: justify;
+}
+
+.inline-history-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  margin: 0 auto;
+}
+
+.inline-history-img:hover {
+  transform: scale(1.03);
+}
+
+.drop-cap-paragraph p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0; 
+  text-align: justify; 
+  max-width: 800px;
+}
+
+.drop-cap-paragraph p:first-of-type::first-letter {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--deep-maroon, #800000);
+  line-height: 1;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* ─── DETAIL CARDS (CLEAN & MODERN) ──────────────────────────────────────── */
+.content-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.detail-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.detail-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: var(--gold-vibrant, #ffd700);
+}
+
+.detail-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.detail-card h3 i { 
+  color: var(--gold-vibrant, #d4a017); 
+  font-size: 1.3rem; 
+  background: #fdfbf7;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.detail-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ─── SPIRITUAL QUOTE ─────────────────────────────────────────────────────── */
+.spiritual-quote {
+  background: #fdfbf7;
+  border-radius: 16px;
+  padding: 40px 50px;
+  margin: 60px 0;
+  position: relative;
+  text-align: center;
+  border-bottom: 4px solid var(--gold-vibrant, #ffd700);
+}
+
+.spiritual-quote blockquote {
+  font-size: 1.3rem;
+  color: #333;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.spiritual-quote cite {
+  display: block;
+  color: var(--deep-maroon, #800000);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ─── HOW TO REACH GRID ───────────────────────────────────────────────────── */
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.reach-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 30px 25px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.reach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-color: var(--gold-vibrant, #ffd700);
+}
+
+.reach-card i {
+  color: var(--deep-maroon, #800000);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.reach-card strong {
+  color: #222;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ─── MAP SECTION ─────────────────────────────────────────────────────────── */
+.map-section {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.map-section .section-title {
+  max-width: var(--max-w);
+  margin: 0 auto 30px;
+  justify-content: center;
+}
+
+.map-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Back/Maps Buttons */
+.back-btn-container {
+  max-width: var(--max-w);
+  margin: 40px auto 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back-to-gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.back-to-gallery-btn:hover {
+  background: #f8f9fa;
+  border-color: #bbb;
+  transform: translateY(-3px);
+}
+
+/* ─── RESPONSIVE DESIGN ──────────────────────────────────────────────────── */
+@media (max-width: 1050px) {
+  .drop-cap-paragraph { 
+    grid-template-columns: 1fr; 
+    gap: 30px; 
+  }
+  .inline-history-img { 
+    grid-column: 1;
+    grid-row: auto; 
+    max-height: 400px; 
+  }
+  .drop-cap-paragraph p {
+    grid-column: 1; 
+  }
+  .facts-bar {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content { padding: 40px 24px 60px; width: 100%; text-align: center; }
+  .hero-content h1 { text-align: center; font-size: 2rem; }
+  .hero-content > p { justify-content: center; font-size: 0.95rem; }
+  .hero-badges { justify-content: center; }
+  
+  .temple-hero-section { 
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px; 
+    border-radius: 12px; 
+    background-size: cover;
+    background-position: center;
+  }
+  .temple-hero-section::after { display: none; }
+  .temple-hero-section::before { width: 100%; background: linear-gradient(to bottom, transparent, rgba(10,15,30,0.9)); }
+
+  .text-container { padding: 30px 20px; }
+  .facts-bar { 
+    min-width: 45%; 
+    border-bottom: 1px solid #eee;
+  }
+  .fact-item:nth-child(even) { border-right: none; }
+  
+  .content-detail-grid { grid-template-columns: 1fr; }
+  .spiritual-quote { padding: 30px 20px; }
+  .map-container iframe { height: 350px; }
+}
+
+@media (max-width: 480px) {
+  .fact-item { 
+    min-width: 100%; 
+    border-right: none;
+  }
+  .reach-grid { grid-template-columns: 1fr; }
+  .back-btn-container { flex-direction: column; }
+  .back-to-gallery-btn { width: 100%; justify-content: center; margin-left: 0 !important; }
+}
