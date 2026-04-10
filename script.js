@@ -13,6 +13,7 @@
    8. Page-load progress bar
    9. Back-to-top button
    10. Parallax hero subtle effect
+   11. Socket.io Live Update & Reload
    ════════════════════════════════════════════════════════════════════════ */
 
 'use strict';
@@ -686,6 +687,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroInstallBtn) heroInstallBtn.style.display = 'none';
   }
 });
+
+/* ──────────────────────────────────────────────────────────────────────────
+   17. SOCKET.IO LIVE RELOAD / UPDATE
+   ────────────────────────────────────────────────────────────────────────── */
+(function initSocketIO() {
+  if (typeof io !== 'undefined') {
+    const socket = io(); // Connects to the serving host
+
+    socket.on('connect', () => {
+      console.log('✦ Socket.io: Connected for live updates');
+    });
+
+    socket.on('reload', () => {
+      console.log('✦ Socket.io: Reload signal received');
+      window.location.reload();
+    });
+
+    socket.on('update_available', (data) => {
+      console.log('✦ Socket.io: Update available', data);
+      showUpdateToast();
+    });
+  } else {
+    console.log('✦ Socket.io: Client library not found, skipping live reload');
+  }
+})();
 
 /* ──────────────────────────────────────────────────────────────────────────
    INIT COMPLETE
