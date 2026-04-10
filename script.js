@@ -635,6 +635,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (installLink) installLink.addEventListener('click', triggerInstall);
   if (mobileInstallLink) mobileInstallLink.addEventListener('click', triggerInstall);
   if (heroInstallBtn) heroInstallBtn.addEventListener('click', triggerInstall);
+
+  // Detect if running as PWA (standalone)
+  if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+    const webLink = document.getElementById('heroWebLink');
+    if (webLink) webLink.style.display = 'inline-block';
+    if (heroInstallBtn) heroInstallBtn.style.display = 'none';
+  }
 });
 
 /* ──────────────────────────────────────────────────────────────────────────
